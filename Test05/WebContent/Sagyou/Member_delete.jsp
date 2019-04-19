@@ -14,8 +14,6 @@
 	if(confirm("정말삭제 하시겠습니까?")==false){
 		history.back();
 	}
-	
-
 </script>
 </head>
 <body>
