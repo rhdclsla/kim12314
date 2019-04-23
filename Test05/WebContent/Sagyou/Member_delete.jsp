@@ -45,6 +45,12 @@
 		out.println("</script>");
 	}catch(Exception e){
 	    e.printStackTrace();
+	}finally{
+		try{
+			if(conn!=null){conn.close(); conn = null;}  //닫아줌
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 %>
 </body>

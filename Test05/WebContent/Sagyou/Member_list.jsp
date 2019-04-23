@@ -77,7 +77,11 @@
       </td>
          <td style = "color:black;"><a href="Member_delete.jsp?id=<%=re.getString("id") %>">Delete</a></td>
    </tr>
-   <%} %>
+   <%}try{
+		if(conn!=null){conn.close(); conn = null;}  //닫아줌
+	}catch(Exception e){
+		e.printStackTrace();
+	} %>
 </table>
 </center>
 

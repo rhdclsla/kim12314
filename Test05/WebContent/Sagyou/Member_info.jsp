@@ -111,7 +111,13 @@
       </tr>
    </table>
 </center>
+<%
+	try{
+		if(conn!=null){conn.close(); conn = null;}  //닫아줌
+	}catch(Exception e){
+		e.printStackTrace();
+	}
 
-
+	%>
 </body>
 </html>
