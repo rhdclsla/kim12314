@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.action.Action;
+import net.action.ActionForward;
 import net.board.db.*;
 
 public class BoardDeleteAction implements Action {

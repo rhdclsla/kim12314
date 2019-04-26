@@ -12,6 +12,15 @@
 		modifyform.submit();
 	}
 	</script>
+	<style type="text/css">
+	
+	body{
+      background-image: url("./Sagyou/1313.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+   }
+</style>
 </head>
 
 <body>

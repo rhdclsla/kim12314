@@ -1,16 +1,18 @@
-package net.board.action;
+ package net.board.action;
 
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.action.Action;
+import net.action.ActionForward;
 import net.board.db.BoardDAO;
 
  public class BoardListAction implements Action {
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		
-		 BoardDAO boarddao=new BoardDAO();//DB ����
+		BoardDAO boarddao=new BoardDAO();//DB ����
 		List boardlist=new ArrayList();
 		
 	  	int page=1;

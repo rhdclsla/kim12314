@@ -1,4 +1,4 @@
-package net.board.action;
+package net.action;
 
 public class ActionForward {
 	private boolean isRedirect=false;

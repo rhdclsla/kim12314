@@ -1,4 +1,4 @@
-package net.board.action;
+package net.action;
 
 import javax.servlet.http.*;
 

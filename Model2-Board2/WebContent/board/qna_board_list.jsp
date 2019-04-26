@@ -15,9 +15,25 @@
 <html>
 <head>
 	<title>MVC 게시판</title>
+<style type="text/css">
+	
+	body{
+      background-image: url("./Sagyou/1313.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+   }
+</style>
 </head>
 
 <body>
+<%
+	if(session.getAttribute("id").equals("admin")){%>
+		<%=session.getAttribute("id")%>님 환영합니다.<br>
+		<a href = "MemberListViewAction.mo">관리자모드 접속(회원 목록보기)</a>
+	<%}else{%>
+		<%=	session.getAttribute("id")%>님 환영합니다.
+	<%} %>
 <!-- 게시판 리스트 -->
 <table width=50% border="0" cellpadding="0" cellspacing="0">
 	<tr align="center" valign="middle">

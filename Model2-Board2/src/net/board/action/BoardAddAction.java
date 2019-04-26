@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import net.action.Action;
+import net.action.ActionForward;
 import net.board.db.BoardBean;
 import net.board.db.BoardDAO;
 

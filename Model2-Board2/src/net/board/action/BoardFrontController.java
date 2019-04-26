@@ -7,6 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.action.Action;
+import net.action.ActionForward;
+
  public class BoardFrontController 
  	extends javax.servlet.http.HttpServlet 
  	implements javax.servlet.Servlet {

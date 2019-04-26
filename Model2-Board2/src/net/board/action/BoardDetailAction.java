@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.board.db.BoardDAO;
+import net.action.Action;
+import net.action.ActionForward;
 import net.board.db.BoardBean;
 
  public class BoardDetailAction implements Action {

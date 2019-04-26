@@ -12,6 +12,15 @@
 		boardform.submit();
 	}
 	</script>
+	<style type="text/css">
+	
+	body{
+      background-image: url("./Sagyou/1313.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+   }
+</style>
 </head>
 <body>
 <!-- 게시판 답변 -->
@@ -30,7 +39,8 @@
 			<div align="center">글쓴이</div>
 		</td>
 		<td>
-			<input name="BOARD_NAME" type="text"/>
+			${id}
+			<input name="BOARD_NAME" type="hidden" value = "${id}"/>
 		</td>
 	</tr>
 	<tr>
