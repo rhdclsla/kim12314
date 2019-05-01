@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-이것을 올림
+노동절
 </body>
 </html>
