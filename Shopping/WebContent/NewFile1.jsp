@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-노동절
+어린이날은 어린이다
 </body>
-</html>ㅏ
+</html>
