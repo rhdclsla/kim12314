@@ -52,35 +52,43 @@
    <table border=1 width=300 style = "margin:auto">
       <tr>
          <td class="aa"><center>ID</center> </font></td>
-         <td><%=((MemberBean)session.getAttribute("memberDetail")).getId()%></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_id()%></td>
       </tr>
       <tr>
           <td class="aa"><center>PASS</center> </font></td>
-          <td><%=((MemberBean)session.getAttribute("memberDetail")).getPw()%></td>
+          <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_pw()%></td>
       </tr>
       <tr>
           <td class="aa"><center>E-MAIL</center> </font></td>
-          <td><%=((MemberBean)session.getAttribute("memberDetail")).getEmail()%></td>
+          <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_email()%></td>
       </tr>
       <tr>
           <td class="aa"><center>NAME</center> </font></td>
-          <td ><%=((MemberBean)session.getAttribute("memberDetail")).getName()%></td>
+          <td ><%=((MemberBean)session.getAttribute("memberDetail")).getMember_name()%></td>
       </tr>
       <tr>
           <td class="aa"><center>IDENTIFICATION NUM</center> </font></td>
-         <td><%=((MemberBean)session.getAttribute("memberDetail")).getJumin()%></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_jumin()%></td>
       </tr>
       <tr>
          <td class="aa"><center>BIRTH</center> </font></td>
-         <td><%=((MemberBean)session.getAttribute("memberDetail")).getBirth()%></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_birth()%></td>
       </tr>
       <tr>
-         <td class="aa"><center>INTEREST</center> </font></td>
-         <td><%=((MemberBean)session.getAttribute("memberDetail")).getInter()%></td>
+         <td class="aa"><center>ADDRESS</center> </font></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_address()%></td>
       </tr>
       <tr>
-        <td class="aa"><center>MEMO</center> </font></td>
-         <td><%=((MemberBean)session.getAttribute("memberDetail")).getIntro()%></td>
+        <td class="aa"><center>PHONE</center> </font></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_phone()%></td>
+      </tr>
+      <tr>
+        <td class="aa"><center>POINT</center> </font></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_point()%></td>
+      </tr>
+      <tr>
+        <td class="aa"><center>DATE</center> </font></td>
+         <td><%=((MemberBean)session.getAttribute("memberDetail")).getMember_date()%></td>
       </tr>
       <tr>
          <td colspan=2 align = "center">
