@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+   <%@page import="net.product.db.productBean"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,16 +121,15 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	<b>주문상품정보</b>
 	<hr>
 	<table border="1">
-		<tr><td>주문일자</td><td>[주문번호]</td><td>이미지</td><td>상품정보	수량</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
-		<tr><td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
+		<tr><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
+		<tr><td align="center"><%=((ProductBean)session.getAttribute("productcode")).getCode()%></td>
+			<td align="center"><%=((ProductBean)session.getAttribute("productimg")).getImg()%></td>
+			<td align="center"><%=((ProductBean)session.getAttribute("productinfomation")).getInfomatoin()%></td>
+			<td align="center"><%=((ProductBean)session.getAttribute("productnum")).getNum()%></td>
+			<td align="center"><%=((ProductBean)session.getAttribute("productprice")).getPrice()%></td>
+			<td align="center"><%=((ProductBean)session.getAttribute("productcondition")).getCondition()%>
+			<td align="center"><input type="button" value="취소" onclick="location.href='Delete.jsp' "><input type="button" value="교환" onclick="location.href='Change.jsp' "><input type="button" value="반품" onclick="location.href='Recall.jsp' "></td>
+			
 		</tr>
 	</table>
 	
@@ -147,10 +146,15 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	<b>취소/교환/반품</b><hr>
 	
 	<table border="1">
-		<tr><td>주문일자</td><td>[주문번호]</td><td>이미지</td><td>상품정보	수량</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
-		<tr><td colspan="9" align="center">
-		나니모 나깟다
-		</td></tr>
+		<tr><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
+		<tr><td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td>
+			
+			<td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td></tr>
 	</table>   
      
          
