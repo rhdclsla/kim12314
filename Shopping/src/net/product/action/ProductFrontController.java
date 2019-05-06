@@ -24,12 +24,18 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 		System.out.println(contextPath);
 		System.out.println(command);
 		
-		if(command.equals()) {
-			
-		}else if(command.equals()) {
-			
-		}
-		 
+//		if(command.equals()) {
+//			
+//		}else if(command.equals()) {
+//			
+//		}else if(command.equals()) {
+//			
+//		}else if(command.equals()) {
+//			
+//		}else if(command.equals()) {
+//			
+//		}
+//		 
 		 
 		 
 		 
