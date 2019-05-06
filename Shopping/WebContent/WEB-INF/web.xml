@@ -36,7 +36,7 @@
   <servlet>
     <servlet-name>ProductFrontController</servlet-name>
     <servlet-class>
-			net.prodcut.action.ProductFrontController
+			net.product.action.ProductFrontController
 	</servlet-class>
   </servlet>
    <servlet-mapping>

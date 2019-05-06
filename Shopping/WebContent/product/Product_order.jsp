@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+   <%@page import="net.product.db.ProductBean"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,7 +97,6 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 
 
     </ul>
-    <%--주문내역조회 --%>
     <div class="tab_container">
         <div id="tab1" class="tab_content">
         
@@ -110,8 +109,8 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 						<option>취소</option>
 						<option>교환</option>
 						<option>반품</option>				
-					</select>&nbsp;<b>|</b>
-			 <form method="post" action="gogo.jsp">              	
+					</select>&nbsp;<b>|</b>&nbsp;
+			 <form method="post" action="Product_order.jsp">              	
 				<input type="button" value="오늘" name="Todate" id="date"><input type="button" value="1주일" name="week" id="date"><input type="button" value="1개월" name="month" id="date"><input type="button" value="3개월" name="3month" id="date"><input type="button" value="6개월" name="date" id="date">
 				<input type="date" name="Firstday" id="Firstday">-<input type="date" name="Lastday"><input type="submit" value="조회">
  </form>   
@@ -122,39 +121,14 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	<b>주문상품정보</b>
 	<hr>
 	<table border="1">
-		<tr><td>주문일자</td><td>[주문번호]</td><td>이미지</td><td>상품정보	수량</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
-		<tr><td align="center">
-				<%
-					String First=request.getParameter("Firstday");
-					String Last=request.getParameter("Lastday");
-					
-					String[] array1 = First.split("-");
-					String[] array2 = Last.split("-");		    
-					//출력				
-					for(int i=0;i<array1.length;i++) {
-						out.print(array1[i].length());
-					}
-					for(int j=0;j<array2.length;j++){
-						out.print(array2[j]);
-					}
-					
-				%>
-				
-			</td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
+		<tr><td>날짜</td><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
+		<tr>
+			<td><%=request.getParameter("Firstday") %></td><td align="center"><input type="button" value="취소" onclick="location.href='Delete.jsp' "><input type="button" value="교환" onclick="location.href='Change.jsp' "><input type="button" value="반품" onclick="location.href='Recall.jsp' "></td>
+			
 		</tr>
 	</table>
 	
         </div>
-        
-        <%--취소 교환 반품 --%>
         <div id="tab2" class="tab_content">
  <form method="post" action="Order.jsp">              	
 				<input type="button" value="오늘" name="Todate" id="date"><input type="button" value="1주일" name="week" id="date"><input type="button" value="1개월" name="month" id="date"><input type="button" value="3개월" name="3month" id="date"><input type="button" value="6개월" name="date" id="date">
@@ -167,18 +141,16 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	<b>취소/교환/반품</b><hr>
 	
 	<table border="1">
-		<tr><td>주문일자</td><td>[주문번호]</td><td>이미지</td><td>상품정보	수량</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
-		<tr><td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-			<td align="center"></td>
-		</tr>
-	</table>
+		<tr><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
+		<tr><td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td>
+			
+			<td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td>
+			<td align="center">	</td></tr>
+	</table>   
      
          
         </div>

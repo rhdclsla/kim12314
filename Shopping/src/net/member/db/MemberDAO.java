@@ -76,7 +76,7 @@ public class MemberDAO {
 	      
 	       
 	       
-	    }catch(SQLException | RuntimeException er){
+	    }catch(RuntimeException er){
 	    	er.printStackTrace();
 			conn.rollback(); //오류시 롤백
 		}finally{
