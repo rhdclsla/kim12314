@@ -14,10 +14,13 @@ import net.action.ActionForward;
 public class ProductFrontController extends HttpServlet implements javax.servlet.Servlet{
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
 			 	throws ServletException, IOException {
-		
+		System.out.println("01");
 		String RequestURI=request.getRequestURI();
+		System.out.println("02");
 		String contextPath=request.getContextPath();
+		System.out.println("03");
 		String command=RequestURI.substring(contextPath.length());
+		System.out.println("04");
 		ActionForward forward=null;
 		Action action=null;
 		
@@ -25,19 +28,21 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 		System.out.println(contextPath);
 		System.out.println(command);
 		
-		if(command.equals("/ProductAddAction.po")) {
+
+		if(command.equals("/product/ProductAddAction.po")) {
 			action = new ProductAddAction();
 			try {
 				forward = action.execute(request, response);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/add.po")) {
+			//Shopping/product/./product/Product_add.jsp
+		}else if(command.equals("/product/Product_add.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./Sagyou/joinForm.jsp");
-		}
-		
+			forward.setPath("Product_add.jsp");
+		} 
+
 		
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
