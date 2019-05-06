@@ -74,12 +74,12 @@ body {
 #header {
 	height: 20px;
 	padding: 10px;
-	margin-bottom: 10px;
-	<!--border: 1px solid #bcbcbc;-->
+	margin-bottom: 10px; <!--
+	border: 1px solid #bcbcbc;
+	-->
 }
 
-#index {
-	width: 150px;
+#index {<!--맥심이미지 ( 메인으로 돌아오기) --> width:150px;
 	height: 100px;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -88,31 +88,24 @@ body {
 	-->
 }
 
-#menubar {
-	width: 1230px;
-	height: 15px;
-	padding: 20px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc;
-}
 
-#board {
-	width: 300px;
-	height:425px;
+
+#board {<!--연아 옆 추천상품 --> width:100px;
+	height: 425px;
 	padding: 60px;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	float: right;
-	border: 1px solid #bcbcbc;
-	<!-- align: center;-->
+	border: 1px solid #bcbcbc; <!--
+	align: center;
+	-->
 }
 
 #best {
 	width: 1065px;
 	height: 200px;
 	padding: 20px;
-	margin-top: 500px;
+	margin-top: 600px;
 	margin-right: 30px;
 	margin-bottom: 20px;
 	float: right;
@@ -122,8 +115,9 @@ body {
 
 #footer {
 	clear: both;
-	padding: 20px;
-	<!--border: 1px solid #bcbcbc;-->
+	padding: 20px; <!--
+	border: 1px solid #bcbcbc;
+	-->
 }
 
 .index img {
@@ -150,17 +144,18 @@ body {
 
 .banner {
 	position: absolute;
-	width: 1020px;
-	height: 535px;
+	width: 1010px;
+	height: 555px;
 	top: 160px;
-	left:35px; margin : 0 auto;
+	left: 35px;
 	padding: 0;
+	margin: 0 auto;
 	overflow: hidden;
 	margin: 0 auto;
 }
 
 .banner ul {
-	position: absolute;
+	position: relative;
 	margin: 0px;
 	padding: 0;
 	list-style: none;
@@ -169,53 +164,121 @@ body {
 .banner ul li {
 	float: left;
 	width: 1020px;
-	height: 535px;
+	height: 555px;
 	margin: 0;
 	padding: 0;
+}
+
+.line1 {
+	position: absolute;
+	top: 130px;
+	left: 1060px;
+	margin-bottom: 20;
+}
+
+.line2 {
+	position: absolute;
+	top: 130px;
+	left: 1260px;
+}
+#menubar {
+	width: 1230px;
+	height: 15px;
+	padding: 20px;
+	margin-bottom: 20px;
+	float: right;
+	border: 1px solid #bcbcbc;
+}
+#menubar ul {
+	width: 1230px;
+	margin: 0 auto;
+	overflow: hidden;
+	list-style: none;
+}
+
+#menubar ul li{
+	float: left;
+	width: 150px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	list-style: none;
+}
+#menubar ul li a{
+	list-style: none;
 }
 </style>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<a href="www.naver.com">로그인</a> <a href="www.daum.net">장바구니</a> 
-			<a href="www.google.com">주문</a> <a href="www.nate.com">공지사항</a> 
-			<a href="www.naver.com">Q&A</a> <a href="www.naver.com">리뷰</a>
+			<a href="www.naver.com">로그인</a> <a href="www.daum.net">장바구니</a> <a
+				href="www.google.com">주문</a> <a href="www.nate.com">공지사항</a> <a
+				href="www.naver.com">Q&A</a> <a href="www.naver.com">리뷰</a>
 		</div>
 		<div id="index">
-			<a href="main.jsp"><img src="h1Logo.png"></a>
+			<a href="main.jsp"><img src="image/h1Logo.png"></a>
 		</div>
 		<div id="menubar">
-			menubar
-		</div>
+			<ul>
+				<li><a href="#">ABOUT MAXIM</a></li>
+				<li><a href="#">PRODUCT</a></li>
+				<li><a href="#">EVENT</a></li>
+				<li><a href="#">NEWS&MEDIA</a></li>
+				<li><a href="#">CUSTOMER</a></li>
+			</ul>
 
+		</div>
+		<!-- 배너사진 -->
 		<div class="banner">
 			<ul>
-				<li><img src="M1.jpg" width="1000" height="535px"></li> 
-				<li><img src="M2.jpg" width="1000" height="535px"></li>
-				<li><img src="M3.jpg" width="1000" height="535px"></li>
-				<li><img src="M4.jpg" width="1000" height="535px"></li>
-				<li><img src="M5.jpg" width="1000" height="535px"></li>
-			</ul> 
-	</div>
-	
-	
-	<div id="board">
-			<p><a href="#"><img src="B1.jpg" width="150" height="150px" alt="메인슬라이드이미지01"/></a></p>
-			<p><a href="#"><img src="B2.jpg" width="150" height="100px" alt="메인슬라이드이미지02"/></a></p>
-			<p><a href="#"><img src="B3.jpg" width="150" height="150px" alt="메인슬라이드이미지03"/></a></p>
-			<p><a href="#"><img src="B4.jpg" width="150" height="150px" alt="메인슬라이드이미지04"/></a></p>
-			<p><a href="#"><img src="B5.jpg" width="150" height="150px" alt="메인슬라이드이미지05"/></a></p>
-		
-		
-		
-	</div>
-	<div id="best">
-		<h2>베스트 상품</h2>
-	</div>
-	<div id="footer">
-		<p>Copyright</p>
-	</div>
+				<li><img src="M1.jpg" width="1000" height="555px"></li>
+				<li><img src="M2.jpg" width="1000" height="555px"></li>
+				<li><img src="M3.jpg" width="1000" height="555px"></li>
+				<li><img src="M4.jpg" width="1000" height="555px"></li>
+				<li><img src="M5.jpg" width="1000" height="555px"></li>
+			</ul>
+		</div>
+
+
+		<div class="board">
+
+			<ul class="line1">
+				<p>
+					<a href="NewFile1.jsp"><img src="image/btn1.png" width="170px"
+						height="170px" /></a>
+				</p>
+				<p>
+					<a href="#"><img src="image/btn2.png" width="170px"
+						height="170px" /></a>
+				</p>
+				<p>
+					<a href="#"><img src="image/btn3.png" width="170px"
+						height="170px" /></a>
+				</p>
+			</ul>
+			<ul class="line2">
+				<p>
+					<a href="#"><img src="image/btn4.png" width="170px"
+						height="170px" /></a>
+				</p>
+
+				<p>
+					<a href="#"><img src="image/btn5.png" width="170px"
+						height="170px" /></a>
+				</p>
+				<p>
+					<a href="#"><img src="image/btn6.png" width="170px"
+						height="170px" /></a>
+				</p>
+			</ul>
+		</div>
+		<div id="best">
+			<h2>베스트 상품</h2>
+		</div>
+		<div id="footer">
+			<p>Copyright</p>
+		</div>
 	</div>
 </body>
 </html>
