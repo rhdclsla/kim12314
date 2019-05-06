@@ -17,7 +17,7 @@ public class MemberDAO {
 	ResultSet re = null;
 
 	
-	public MemberDAO() {
+	public MemberDAO() { //디비연결
 		try{
 			Context init = new InitialContext();
 	  		DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/OracleDB");
@@ -91,7 +91,7 @@ public class MemberDAO {
 	}
 	//회원정보 삭제
 	public boolean memberDelete(String id) {
-		String sql = "delete from member where id=?";
+		String sql = "delete from member where member_id=?";
 		try{
 			pt=conn.prepareStatement(sql);
 			pt.setString(1, id);
@@ -111,7 +111,7 @@ public class MemberDAO {
 	
 	//회원상세정보 가져오기 
 	public MemberBean getMemDetail(String id) throws SQLException {
-		String sql = "select * from member where id = ?";
+		String sql = "select * from member where member_id = ?";
 		try{	   
 	  		pt = conn.prepareStatement(sql);
 	  		pt.setString(1, id);
@@ -130,7 +130,8 @@ public class MemberDAO {
 	  		memberbean.setMember_postcode(re.getString("zip"));
 	  		memberbean.setMember_address(re.getString("address"));
 	  		memberbean.setMember_phone(re.getString("phone"));
-	  		memberbean.setMember_date(re.getString("date"));
+	  		String date = String.valueOf(re.getTimestamp("date"));
+	  		memberbean.setMember_date(date);
 	  		memberbean.setMember_point(re.getInt("point"));
 	  	
 	  		
@@ -153,7 +154,7 @@ public class MemberDAO {
 		public List getMemberList() throws SQLException {
 			List list = new ArrayList();
 			try{	   
-		  		pt = conn.prepareStatement("select * from test where id != 'admin'");
+		  		pt = conn.prepareStatement("select * from member where member_id != 'admin'");
 		  		re = pt.executeQuery();
 		  		while(re.next()) {
 			  		MemberBean memberbean = new MemberBean();
@@ -166,7 +167,8 @@ public class MemberDAO {
 			  		memberbean.setMember_postcode(re.getString("zip"));
 			  		memberbean.setMember_address(re.getString("address"));
 			  		memberbean.setMember_phone(re.getString("phone"));
-			  		memberbean.setMember_date(re.getString("date"));
+			  		String date = String.valueOf(re.getString("date"));
+			  		memberbean.setMember_date(date);
 			  		memberbean.setMember_point(re.getInt("point"));
 		  			list.add(memberbean);
 		  		}

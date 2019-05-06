@@ -22,7 +22,6 @@ public class MemberLoginAction implements Action {
 	
 		memberbean.setMember_id(request.getParameter("id"));
 		memberbean.setMember_pw(request.getParameter("pw"));
-		
 
 		if(!memberdao.idCheck(memberbean.getMember_id(), memberbean.getMember_pw())) {
 			PrintWriter out = response.getWriter();

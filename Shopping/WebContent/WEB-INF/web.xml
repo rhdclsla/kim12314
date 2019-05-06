@@ -22,4 +22,26 @@
     <url-pattern>*.mo</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>BoardFrontController</servlet-name>
+    <servlet-class>
+			net.board.action.BoardFrontController
+	</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>BoardFrontController</servlet-name>
+    <url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProductFrontController</servlet-name>
+    <servlet-class>
+			net.prodcut.action.ProductFrontController
+	</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>ProductFrontController</servlet-name>
+    <url-pattern>*.po</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
