@@ -1,15 +1,19 @@
 package net.member.db;
 
+
+
 public class MemberBean {
 	private String member_id;
 	private String member_pw;
 	private String member_name;
 	private String member_jumin;
+	private String member_birth;
 	private String member_email;
 	private String member_address;
 	private String member_phone;
-	private String member_point;
-	
+	private String member_postcode;
+	private String member_date;
+	private int member_point;
 	
 	public String getMember_id() {
 		return member_id;
@@ -53,11 +57,30 @@ public class MemberBean {
 	public void setMember_phone(String member_phone) {
 		this.member_phone = member_phone;
 	}
-	public String getMember_point() {
+	public int getMember_point() {
 		return member_point;
 	}
-	public void setMember_point(String member_point) {
+	public void setMember_point(int member_point) {
 		this.member_point = member_point;
 	}
+	public String getMember_birth() {
+		return member_birth;
+	}
+	public void setMember_birth(String member_birth) {
+		this.member_birth = member_birth;
+	}
+	public String getMember_postcode() {
+		return member_postcode;
+	}
+	public void setMember_postcode(String member_postcode) {
+		this.member_postcode = member_postcode;
+	}
+	public String getMember_date() {
+		return member_date;
+	}
+	public void setMember_date(String member_date) {
+		this.member_date = member_date;
+	}
+	
 		
 }
