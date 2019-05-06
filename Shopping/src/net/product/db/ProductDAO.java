@@ -18,6 +18,7 @@ public class ProductDAO {
 	Connection conn = null;
 	PreparedStatement pt = null;
 	ResultSet re = null;
+	
 
 	
 	public ProductDAO() { //디비 연결
@@ -33,6 +34,7 @@ public class ProductDAO {
 	
 	//디비에 상품 등록하기
 	public boolean insertProduct(ProductBean productbean) throws SQLException {
+		
 		String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
 		java.sql.Timestamp date = java.sql.Timestamp.valueOf(productbean.getProduct_date());
 		try {
