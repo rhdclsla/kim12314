@@ -37,7 +37,7 @@ public class ProductAddAction implements Action{
 		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("상품등록 페이지");
+		forward.setPath("add.po");
 		productdao.conClose();
 		return forward;
 		
