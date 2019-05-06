@@ -16,11 +16,11 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			 	throws ServletException, IOException {
 		System.out.println("01");
 		String RequestURI=request.getRequestURI();
-		System.out.println("001");
+		System.out.println("02");
 		String contextPath=request.getContextPath();
-		System.out.println("0001");
+		System.out.println("03");
 		String command=RequestURI.substring(contextPath.length());
-		System.out.println("00001");
+		System.out.println("04");
 		ActionForward forward=null;
 		Action action=null;
 		
@@ -28,28 +28,22 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 		System.out.println(contextPath);
 		System.out.println(command);
 		
+
 		if(command.equals("/product/ProductAddAction.po")) {
-			action=new ProductAddAction();
+			action = new ProductAddAction();
 			try {
-				forward=action.execute(request, response);
-				
-			} catch (Exception e) {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-		}else if(command.equals("/Product_add.po")) {
+			//Shopping/product/./product/Product_add.jsp
+		}else if(command.equals("/product/Product_add.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./product/Product_add.jsp");
-		}
-//		else if(command.equals()) {
-//			
-//		}else if(command.equals()) {
-//			
-//		}else if(command.equals()) {
-//			
-//		}
-//		 
+			forward.setPath("Product_add.jsp");
+		} 
+
+		
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());

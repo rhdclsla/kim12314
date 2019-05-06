@@ -15,6 +15,7 @@ public class ProductAddAction implements Action{
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		ProductDAO productdao = new ProductDAO();
 		ProductBean productbean = new ProductBean();
+		request.setCharacterEncoding("UTF-8");
 		
 		productbean.setProduct_code(Integer.parseInt(request.getParameter("code")));
 		productbean.setProduct_category(request.getParameter("category"));
@@ -36,14 +37,9 @@ public class ProductAddAction implements Action{
 		}
 		
 		ActionForward forward = new ActionForward();
-		
 		forward.setRedirect(true);
-		
 		forward.setPath("Product_add.po");
-		System.out.println(forward.getPath());
-		System.out.println(forward.isRedirect());
 		productdao.conClose();
-		
 		return forward;
 		
 	}
