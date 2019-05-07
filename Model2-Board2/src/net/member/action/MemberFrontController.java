@@ -74,7 +74,6 @@ implements javax.servlet.Servlet {
 			action = new MemberDeleteAction();
 			try {
 				forward = action.execute(request, response);
-				System.out.println("2123");
 			}catch(Exception e) {
 				e.printStackTrace();
 			}

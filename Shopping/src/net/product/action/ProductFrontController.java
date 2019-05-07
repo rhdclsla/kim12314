@@ -14,13 +14,7 @@ import net.action.ActionForward;
 public class ProductFrontController extends HttpServlet implements javax.servlet.Servlet{
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
 			 	throws ServletException, IOException {
-		
-		String RequestURI=request.getRequestURI();
-		
-		String contextPath=request.getContextPath();
-		
-		String command=RequestURI.substring(contextPath.length());
-		
+
 		ActionForward forward=null;
 		Action action=null;
 		
@@ -29,33 +23,46 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 		System.out.println(command);
 		
 		if(command.equals("/product/ProductAddAction.po")) {
-			action=new ProductAddAction();
+			action = new ProductAddAction();
 			try {
-				forward=action.execute(request, response);
-				
-			} catch (Exception e) {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
 				e.printStackTrace();
 			}
-			
-		}else if(command.equals("/Product_add.po")) {
+		}else if(command.equals("/product/Product_add.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./product/Product_add.jsp");
-		}else if(command.equals("/product/ProductDeleteAction.po")) {
-			System.out.println("go");
+			forward.setPath("Product_add.jsp");
+		}else if(command.equals("/main.po")) {
 			forward=new ActionForward();
-			System.out.println("gogo");
 			forward.setRedirect(false);
-			System.out.println("gogogo");
-			forward.setPath("ProductDeleteAction.po");
-			System.out.println(command);
-	}
-//		else if(command.equals()) {
-//			
-//		}else if(command.equals()) {
-//			
-//		}
-//		 
+			forward.setPath("main.jsp");
+		}else if(command.equals("/ProductOrder.po")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./product/Product_order.jsp");
+		}else if(command.equals("/ProductOrderAction.po")) {
+			action = new ProductOrderAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/ProductListAction.po")) {
+			action = new ProductListAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/ProductList.po")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+
+			forward.setPath("./product/Product_list.jsp");
+		}
+
+		
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());

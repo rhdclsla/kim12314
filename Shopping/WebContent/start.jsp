@@ -8,6 +8,6 @@
 </head>
 <body>
 시작페이지
-<jsp:forward page="/MemberLoginForm.mo"/>
+<jsp:forward page="/main.po"/>
 </body>
 </html>

@@ -34,11 +34,11 @@ import net.board.db.BoardDAO;
    		
    		if (endpage>startpage+10-1) endpage=startpage+10-1;
    		
-   		request.setAttribute("page", page);		  //���� ������ ��.
-   		request.setAttribute("maxpage", maxpage); //�ִ� ������ ��.
-   		request.setAttribute("startpage", startpage); //���� �������� ǥ���� ù ������ ��.
-   		request.setAttribute("endpage", endpage);     //���� �������� ǥ���� �� ������ ��.
-		request.setAttribute("listcount",listcount); //�� ��.
+   		request.setAttribute("page", page);		  
+   		request.setAttribute("maxpage", maxpage); 
+   		request.setAttribute("startpage", startpage); 
+   		request.setAttribute("endpage", endpage);     
+		request.setAttribute("listcount",listcount); 
 		request.setAttribute("boardlist", boardlist);
 		
 		ActionForward forward= new ActionForward();

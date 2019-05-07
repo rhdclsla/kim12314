@@ -11,20 +11,7 @@
 
 </head>
 <body>
-<%--
-create table product( --상품등록
-product_code int not null primary key, --상품코드
-product_category VARCHAR2(20), --상품분류
-product_name varchar2(20), --상품이름
-product_count int, --수량
-product_image varchar2(150), --사진
-product_cost int, --원가
-product_price int, --판매가
-product_detail varchar2(1000), --상품설명
-product_date date --등록일
-); 
- 
- --%>
+
 <h2>상품등록</h2>
 <jsp:useBean id="now" class="java.util.Date" />
 <fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss" var="date"/>

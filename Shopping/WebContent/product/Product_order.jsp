@@ -1,12 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%@page import="net.product.db.*"%>
-   
-<%
-	ProductBean bean = (ProductBean) request.getAttribute("ProductList");
-	ProductDAO PD_code=(ProductDAO)request.getAttribute("Product_code");
-	ProductDAO PD_id=(ProductDAO)request.getAttribute("Product_id");
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,23 +109,11 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 						<option>취소</option>
 						<option>교환</option>
 						<option>반품</option>				
-					</select>
-			 <form method="post" action="Product_order.jsp">              	
-				<input type="button" value="오늘" name="Todate" id="date">
-				<input type="button" value="1주일" name="week" id="date">
-				<input type="button" value="1개월" name="month" id="date">
-				<input type="button" value="3개월" name="3month" id="date">
-				<input type="button" value="6개월" name="date" id="date">
-				<input type="date" name="Firstday" id="Firstday">-<input type="date" name="Lastday"><input type="submit" value="조회">
- 			</form>   
-			<ul>
-				<li>기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
-        		<li>주문번호를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.</li>
-    		</ul>
-    		<br>
-	<b>주문상품정보</b>
-	<hr>
-	<table border="1">
+
+					</select>&nbsp;<b>|</b>&nbsp;
+			 <form method="post" action="Order.jsp">              	
+				<input type="button" value="오늘" name="Todate" id="date"><input type="button" value="1주일" name="week" id="date"><input type="button" value="1개월" name="month" id="date"><input type="button" value="3개월" name="3month" id="date"><input type="button" value="6개월" name="date" id="date">
+
 		<tr><td>날짜</td><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
 		<tr>
 			<td colspan="7"></td>
@@ -145,6 +127,7 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 			
 			<td align="center"><input type="button" value="취소" onclick="location.href='ProductDeleteAction.po' "><input type="button" value="교환" onclick="location.href='교환하는곳' "><input type="button" value="반품" onclick="location.href='반품하는곳'  "></td>
 			
+
 		</tr>
 	</table>
 	
@@ -161,15 +144,10 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	<b>취소/교환/반품</b><hr>
 	
 	<table border="1">
-		<tr><td>상품코드</td><td>이미지</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
-		<tr><td align="center">	</td>
-			<td align="center">	</td>
-			<td align="center">	</td>
-			
-			<td align="center">	</td>
-			<td align="center">	</td>
-			<td align="center">	</td>
-			<td align="center">	</td></tr>
+		<tr><td>주문일자</td><td>[주문번호]</td><td>이미지</td><td>상품정보	수량</td><td>상품정보</td><td>수량</td><td>상품구매금액</td><td>주문처리상태</td><td>취소/교환/반품</td></tr>
+		<tr><td colspan="9" align="center">
+		나니모 나깟다
+		</td></tr>
 	</table>   
      
          
