@@ -60,154 +60,7 @@
 			});
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-	align: center;
-}
 
-#container {
-	width: 1480px;
-	margin: 10px auto;
-	padding: 10px;
-}
-
-#header {
-	height: 20px;
-	padding: 10px;
-	margin-bottom: 10px; <!--
-	border: 1px solid #bcbcbc;
-	-->
-}
-
-#index {<!--맥심이미지 ( 메인으로 돌아오기) --> width:150px;
-	height: 100px;
-	padding: 20px;
-	margin-bottom: 20px;
-	float: left; <!--
-	border: 1px solid #bcbcbc;
-	-->
-}
-
-
-
-#board {<!--연아 옆 추천상품 --> width:100px;
-	height: 425px;
-	padding: 60px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc; <!--
-	align: center;
-	-->
-}
-
-#best {
-	width: 1065px;
-	height: 200px;
-	padding: 20px;
-	margin-top: 600px;
-	margin-right: 30px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc;
-	align: center;
-}
-
-#footer {
-	clear: both;
-	padding: 20px; <!--
-	border: 1px solid #bcbcbc;
-	-->
-}
-
-.index img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 150%;
-}
-
-@media ( max-width : 480px ) {
-	#container {
-		width: auto;
-	}
-	#content {
-		float: none;
-		width: auto;
-	}
-	#best {
-		float: none;
-		width: auto;
-	}
-}
-
-.banner {
-	position: absolute;
-	width: 1010px;
-	height: 555px;
-	top: 160px;
-	left: 35px;
-	padding: 0;
-	margin: 0 auto;
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.banner ul {
-	position: relative;
-	text-align: center;
-	padding: 0;
-	list-style: none;
-}
-
-.banner ul li {
-	float: left;
-	width: 1020px;
-	height: 555px;
-	margin: 0;
-	padding: 0;
-}
-
-.line1 {
-	position: absolute;
-	top: 130px;
-	left: 1060px;
-	margin-bottom: 20;
-}
-
-.line2 {
-	position: absolute;
-	top: 130px;
-	left: 1260px;
-}
-#menubar {
-	width: 1230px;
-	height: 15px;
-	padding: 20px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc;
-}
-#menubar ul {
-	width: 1230px;
-	margin: 0 auto;
-	overflow: hidden;
-	list-style: none;
-}
-
-#menubar ul li{
-	float: left;
-	width: 150px;
-	height: 15px;
-	line-height: 15px;
-	text-align: center;
-	list-style: none;
-}
-#menubar ul li a{
-	list-style: none;
-}
-</style>
 </head>
 <body>
 	<div id="container">
@@ -240,12 +93,12 @@ body {
 		<!-- 배너사진 -->
 		<div class="banner">
 			<ul>
-				<li><img src="image/M1.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M2.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M3.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M4.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M5.jpg" width="1000" height="555px"></li>
-				<li><img src="image/hori.jpg" width="600" height="555px"></li>
+				<li><img src="image/hori.jpg" width="500" height="555px"></li>
+				<li><img src="image/hori4.jpg" width="900" height="555px"></li>
+				<li><img src="image/hori2.jpg" width="500" height="555px"></li>
+				<li><img src="image/hori5.jpg" width="750" height="555px"></li>
+				<li><img src="image/hori3.jpg" width="500" height="555px"></li>
+				<li><img src="image/hori6.jpg" width="900" height="555px"></li>
 			</ul>
 		</div>
 

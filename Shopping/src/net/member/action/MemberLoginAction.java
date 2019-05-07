@@ -44,7 +44,7 @@ public class MemberLoginAction implements Action {
 			session.setAttribute("id", memberbean.getMember_id());
 			ActionForward forward= new ActionForward();
 			forward.setRedirect(true);
-	   		forward.setPath("./main.po");
+	   		forward.setPath("main.po");
 	   		memberdao.connClose();
 			return forward;
 		}
