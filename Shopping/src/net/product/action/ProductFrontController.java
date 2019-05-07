@@ -14,15 +14,12 @@ import net.action.ActionForward;
 public class ProductFrontController extends HttpServlet implements javax.servlet.Servlet{
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
 			 	throws ServletException, IOException {
-
+		String RequestURI=request.getRequestURI();
+		String contextPath=request.getContextPath();
+		String command=RequestURI.substring(contextPath.length());
 		ActionForward forward=null;
 		Action action=null;
-
-		String RequestURI=request.getRequestURI();
 		
-		String contextPath=request.getContextPath();
-		
-		String command=RequestURI.substring(contextPath.length());
 		System.out.println(RequestURI);
 		System.out.println(contextPath);
 		System.out.println(command);
@@ -63,7 +60,6 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 		}else if(command.equals("/ProductList.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-
 			forward.setPath("./product/Product_list.jsp");
 		}
 

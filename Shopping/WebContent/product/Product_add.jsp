@@ -7,8 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>상품목록</title>
-
-
 </head>
 <body>
 
@@ -29,7 +27,7 @@
 		<td>상품이름</td><td colspan="5"><input type="text" name="name" id="name"></td>
 	</tr>
 	<tr>
-		<td>원가</td><td><input type="text" name="cost" id="cost"></td><td>판매가</td><td><input type="text" id="price" name="price"></td>
+		<td>원가</td><td><input type="text" name="cost" id="cost"></td><td>판매가</td><td><input type="text" id="price" name="price"></td><td>순수익</td><td><% %></td>
 	</tr>
 	<tr>
 		<td colspan="6">상품상세 설명</td>
@@ -38,11 +36,10 @@
 		<td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
 	</tr>
 	<tr>
-		<td colspan="5"><a href="image.jsp">이미지</a></td>
-		<td><%=request.getParameter("image")%></td>
-		
-		
-			
+		<td>이미지</td><td colspan="5">
+<input type="file"  size=40 id="image" name="image">
+<br><br>
+</td>
 	</tr>
 	<tr>
 		<td>수량</td><td colspan="3"><input type="text" id="count" name="count"></td><td>상품등록일</td>
@@ -55,7 +52,5 @@
 	</tr>
 </table>
 </form>
-
-
 </body>
 </html>

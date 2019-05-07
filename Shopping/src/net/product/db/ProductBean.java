@@ -11,7 +11,6 @@ public class ProductBean {
 	private String product_detail; //상품설명
 	private String product_date; //등록일
 	
-	
 	public int getProduct_code() {
 		return product_code;
 	}
@@ -61,8 +60,6 @@ public class ProductBean {
 		this.product_detail = product_detail;
 	}
 	public String getProduct_date() {
-		
-		
 		return product_date;
 	}
 	public void setProduct_date(String product_date) {
