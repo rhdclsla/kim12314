@@ -9,7 +9,7 @@
 <body>
 		<div id="footer1">
 			<p>
-				<img src="image/tel.gif" />
+				<a href="gogogo.jsp" > 눌러바 ㅋ</a>
 			</p>
 		</div>
 </body>
