@@ -16,7 +16,7 @@
 <a href = "ProductListAction.po">상품리스트</a><br><br>
 <a href = "MemberListViewAction.mo">회원리스트</a><br><br>
 <a href = "Product_list.po">매출현황</a><br><br>
-<a href = "Product_list.po">배송리스트</a><br><br>
+<a href = "Product_list.po">배송리스트.</a><br><br>
 <a href = "MemberLogoutAction.mo">로그아웃</a><br><br>
 </body>
 </html>
