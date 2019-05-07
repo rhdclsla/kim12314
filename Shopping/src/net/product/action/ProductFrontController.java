@@ -1,4 +1,4 @@
-package net.member.action;
+package net.product.action;
 
 import java.io.IOException;
 
@@ -11,14 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import net.action.Action;
 import net.action.ActionForward;
 
-public class MemberFrontController extends HttpServlet 
-implements javax.servlet.Servlet {
-	 protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
+public class ProductFrontController extends HttpServlet implements javax.servlet.Servlet{
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
 			 	throws ServletException, IOException {
 		String RequestURI=request.getRequestURI();
 		String contextPath=request.getContextPath();
 		String command=RequestURI.substring(contextPath.length());
-		request.setCharacterEncoding("euc-kr");
 		ActionForward forward=null;
 		Action action=null;
 		
@@ -26,59 +24,34 @@ implements javax.servlet.Servlet {
 		System.out.println(contextPath);
 		System.out.println(command);
 		
-		if(command.equals("/MemberLoginForm.mo")){
-			forward=new ActionForward();
-			forward.setRedirect(false);
-			forward.setPath("./Sagyou/loginForm.jsp");
-		}else if(command.equals("/MemberLoginAction.mo")) {
-			action = new MemberLoginAction();
+		if(command.equals("/product/ProductAddAction.po")) {
+			action = new ProductAddAction();
 			try {
 				forward = action.execute(request, response);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/MemberAddView.mo")) {
+		}else if(command.equals("/product/Product_add.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./Sagyou/joinForm.jsp");
-		}else if(command.equals("/MemberAddAction.mo")) {
-			action = new MemberAddAction();
-			try {
-				forward = action.execute(request, response);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-		}else if(command.equals("/MemberListView.mo")) {
+			forward.setPath("Product_add.jsp");
+		}else if(command.equals("/main.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./Sagyou/Member_list.jsp");
-		}else if(command.equals("/MemberInfoView.mo")) {
+			forward.setPath("main.jsp");
+		}else if(command.equals("/ProductOrder.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./Sagyou/Member_info.jsp");
-		}else if(command.equals("/MemberInfoAction.mo")) {
-			action = new MemberInfoAction();
-			try {
-				forward = action.execute(request, response);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-		}else if(command.equals("/MemberListViewAction.mo")) {
-			action = new MemberListViewAction();
-			try {
-				forward = action.execute(request, response);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-		}else if(command.equals("/MemberDeleteAction.mo")) {
-			action = new MemberDeleteAction();
+			forward.setPath("./product/Product_order.jsp");
+		}else if(command.equals("/ProductOrderAction.po")) {
+			action = new ProductOrderAction();
 			try {
 				forward = action.execute(request, response);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
-		
+
 		
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
@@ -88,7 +61,8 @@ implements javax.servlet.Servlet {
 					request.getRequestDispatcher(forward.getPath());
 			dispatcher.forward(request, response);
 		}
-	 }
+
+	}
 	 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doProcess(request, response);
@@ -97,5 +71,4 @@ implements javax.servlet.Servlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doProcess(request, response);
 	}
-
 }

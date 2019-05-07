@@ -22,7 +22,6 @@ public class MemberLoginAction implements Action {
 	
 		memberbean.setMember_id(request.getParameter("id"));
 		memberbean.setMember_pw(request.getParameter("pw"));
-		
 
 		if(!memberdao.idCheck(memberbean.getMember_id(), memberbean.getMember_pw())) {
 			PrintWriter out = response.getWriter();
@@ -31,15 +30,24 @@ public class MemberLoginAction implements Action {
 			out.println("location.href='./MemberLoginForm.mo';");
 			out.println("</script>");
 			out.close();
-			System.out.println("7");
 			return null;
 		}
 		
-		session.setAttribute("id", memberbean.getMember_id());
-		ActionForward forward= new ActionForward();
-		forward.setRedirect(true);
-   		forward.setPath("./BoardList.bo");
-   		memberdao.connClose();
-		return forward;
+		if(memberbean.getMember_id().equals("admin")) {
+			session.setAttribute("id", memberbean.getMember_id());
+			ActionForward forward= new ActionForward();
+			forward.setRedirect(true);
+	   		forward.setPath("./AdminPage.mo");
+	   		memberdao.connClose();
+			return forward;
+		}else {
+			session.setAttribute("id", memberbean.getMember_id());
+			ActionForward forward= new ActionForward();
+			forward.setRedirect(true);
+	   		forward.setPath("./main.po");
+	   		memberdao.connClose();
+			return forward;
+		}
+		
 	 }
 }
