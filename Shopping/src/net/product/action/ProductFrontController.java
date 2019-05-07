@@ -17,7 +17,12 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 
 		ActionForward forward=null;
 		Action action=null;
+
+		String RequestURI=request.getRequestURI();
 		
+		String contextPath=request.getContextPath();
+		
+		String command=RequestURI.substring(contextPath.length());
 		System.out.println(RequestURI);
 		System.out.println(contextPath);
 		System.out.println(command);
