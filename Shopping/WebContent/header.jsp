@@ -14,17 +14,20 @@
 </head>
 <body>
 	<div id="header" class="header">
-		<%if(session.getAttribute("id")!=null){ %>
-				<a href="MemberLogoutAction.mo">LOGOUT</a>
-				<a href="www.daum.net">BASKET</a> 
-				<a href="ProductOrderAction.po">ORDER</a>
-			<%}else{ %>
-				<a href="MemberLoginForm.mo">LOGIN</a>
-				<a href ="MemberAddView.mo">JOIN</a>
-			<%} %>	
-				<a href="www.nate.com">NOTICE</a>
-				<a href="BoardList.bo">Q&A</a> 
-				<a href="www.naver.com">REVIEW</a>
+	<%if(session.getAttribute("id")!=null) {%>
+		<%if(session.getAttribute("id").equals("admin")){ %>
+			<a href="AdminPage.mo">ADMINPAGE</a>
+		<%}%>	
+			<a href="MemberLogoutAction.mo">LOGOUT</a>
+			<a href="www.daum.net">BASKET</a> 
+			<a href="ProductOrderAction.po">ORDER</a>
+	<%}else{ %>	
+			<a href="MemberLoginForm.mo">LOGIN</a>
+			<a href="MemberAddView.mo">JOIN</a>	
+	<%} %>
+			<a href="www.nate.com">NOTICE</a>
+			<a href="BoardList.bo">Q&A</a> 
+			<a href="www.naver.com">REVIEW</a>	
 	</div>
 
 

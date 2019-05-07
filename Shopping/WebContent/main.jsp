@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
 <meta charset="euc-kr">
-<title>MainPage</title>
+<title>NogiCoffee</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

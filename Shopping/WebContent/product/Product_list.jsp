@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
 	List<ProductBean> beans = (List<ProductBean>)session.getAttribute("productbean");
 %>
@@ -19,19 +20,25 @@
 		<td>가격</td>
 		<td>재고</td>
 		<td>상품등록일</td>
+		<td>상품삭제</td>
 	</tr>
 	<%for(ProductBean bean : beans){ %>
 	<tr>
-		<td><a href="ProductDetailAction.mo?id=<%=bean.getProduct_code() %>">
-         <%=bean.getProduct_code() %>
-         </a></td>
+		<td><a href="ProductDetailAction.mo?code=<%=bean.getProduct_code() %>">
+         	<%=bean.getProduct_code() %>
+         	</a></td>
 		<td><%=bean.getProduct_name() %></td>
 		<td><%=bean.getProduct_count() %></td>
 		<td><%=bean.getProduct_price() %></td>
 		<td><%=bean.getProduct_date() %></td>
+		<td><a href = "ProductDeleteAction.po?code=<%=bean.getProduct_code() %>">
+			Delete
+			</a></td>
 	</tr>
 	<%} %>
 </table>
-<input type="button" value = "수정" onclick = "ProductUpdateAction.po"/>
+<a href="ProductAddForm.po"><button>등록</button></a>
+<a href="AdminPage.mo"><button>돌아가기</button></a>
+
 </body>
 </html>
