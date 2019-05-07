@@ -9,10 +9,22 @@
 </head>
 <body>
 	<div id="header" class="header">
-		<a href="www.naver.com">REVIEW</a> <a href="www.daum.net">Q&A</a> 
-		<a href="www.google.com">NOTICE</a> <a href="order.jsp">ORDER</a> 
-		<a href="basket.jsp">BASKET</a> <a href="login.jsp">LOGIN</a>
-</div>
+
+	<%if(session.getAttribute("id")!=null) {%>
+		<%if(session.getAttribute("id").equals("admin")){ %>
+			<a href="AdminPage.mo">ADMINPAGE</a>
+		<%}%>	
+			<a href="MemberLogoutAction.mo">LOGOUT</a>
+			<a href="www.daum.net">BASKET</a> 
+			<a href="ProductOrderAction.po">ORDER</a>
+	<%}else{ %>	
+			<a href="MemberLoginForm.mo">LOGIN</a>
+			<a href="MemberAddView.mo">JOIN</a>	
+	<%} %>
+			<a href="www.nate.com">NOTICE</a>
+			<a href="BoardList.bo">Q&A</a> 
+			<a href="www.naver.com">REVIEW</a>	
+	</div>
 
 
 	<div id="index">
