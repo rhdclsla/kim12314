@@ -23,7 +23,7 @@
 
 
 
-
+	
 	<div class="menubar">
 		<ul>
 			<li><a href="#">ABOUT MAXIM</a></li>
@@ -33,7 +33,8 @@
 					<li><a href="#">Galleries</a></li>
 					<li><a href="#">Apghghghps</a></li>
 					<li><a href="#">Extensions</a></li>
-				</ul></li>
+				</ul>
+			</li>
 			<li><a href="#">EVENT</a></li>
 			<li><a href="#">NEWS&MEDIA</a></li>
 			<li><a href="#">CUSTOMER</a></li>

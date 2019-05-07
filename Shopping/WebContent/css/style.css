@@ -45,6 +45,7 @@ body {
 }
 
 .menubar li {
+	
 	float: left;
 	padding: 0px;
 	list-style: none;
@@ -61,6 +62,7 @@ body {
 	padding: 0px 25px;
 	text-align: center;
 	text-decoration: none;
+	
 }
 
 .menubar li a:hover, .menubar ul li:hover a {
@@ -77,9 +79,9 @@ body {
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
-	position: fixed;
+	position: absolute;
 	width: 200px;
-	z-index: 200;
+	z-index: 1;
 }
 
 .menubar li:hover ul {
@@ -104,7 +106,7 @@ body {
 	display: block;
 	height: 50px;
 	font-size: 25px;
-	font-weight: nomal;
+	font-weight: normal;
 	margin: 0px;
 	text-align: left;
 }
@@ -121,19 +123,17 @@ body {
 }
 
 
-#board { 
-	width:100px;
-	height: 425px;
-	padding: 60px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc; <!--
-	align: center;
-	-->
-}
+.best { 
+	 text-align: center
+	width: 2000px;
+	float: left;
+	position: absolute;
+	top: 830px;
+	left: 200px;
+	border: 1px solid #bcbcbc;
+} 
 
-#best {
+#board {
 	width: 1065px;
 	height: 200px;
 	padding: 20px;
@@ -146,10 +146,17 @@ body {
 }
 
 #footer {
+/* 	position : fixed;
+	
 	clear: both;
-	padding: 20px; <!--
+	padding: 20px; 
 	border: 1px solid #bcbcbc;
-	-->
+ */
+	position: fixed;
+	right:0;
+	bottom: 0;
+height: 100px;
+
 }
 
 
@@ -169,14 +176,14 @@ body {
 
 .banner {
 	position: absolute;
-	width: 1010px;
-	height: 555px;
+	width: 1250px;	height: 680px;
 	top: 160px;
-	left: 35px;
+	left: 300px;
 	padding: 0;
 	margin: 0 auto;
 	overflow: hidden;
 	margin: 0 auto;
+	align:center;
 }
 
 .banner ul {
@@ -187,22 +194,47 @@ body {
 }
 
 .banner ul li {
-	float: left;
-	width: 1020px;
-	height: 555px;
+	float: left;	width: 1250px;	height: 680px;
 	margin: 0;
 	padding: 0;
 }
 
+
+
 .line1 {
 	position: absolute;
-	top: 130px;
-	left: 1060px;
+	top: 50px;
+	left: 100px;
 	margin-bottom: 20;
+	float:left;
 }
 
-.line2 {
+ .line2 {
 	position: absolute;
-	top: 130px;
-	left: 1260px;
+	top: 50px;
+	left: 350px;
 }
+.line3 {
+	position: absolute;
+	top: 50px;
+	left: 600px;
+	margin-bottom: 20;
+}
+.line4 {
+	position: absolute;
+	top:50px;
+	left: 850px;
+	margin-bottom: 20;
+}
+.line5 {
+	position: absolute;
+	top: 50px;
+	left: 1100px;
+	margin-bottom: 20;
+}
+.line6 {
+	position: absolute;
+	top: 50px;
+	left: 1400px;
+	margin-bottom: 20;
+} 

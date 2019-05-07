@@ -66,11 +66,11 @@
 <!-- 배너사진 -->
 		<div class="banner">
 			<ul>
-				<li><img src="image/M1.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M2.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M3.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M4.jpg" width="1000" height="555px"></li>
-				<li><img src="image/M5.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M1.jpg"	width="1230px" height="680px"></li>
+				<li><img src="image/M2.jpg" width="1230px" height="680px"></li>
+				<li><img src="image/M3.jpg" width="1230px" height="680px"></li>
+				<li><img src="image/M4.jpg" width="1225px" height="680px"></li>
+				<li><img src="image/M5.jpg" width="1225px" height="680px""></li>
 			</ul>
 		</div>
 </body>
