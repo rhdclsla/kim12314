@@ -109,7 +109,7 @@ public class ProductDAO {
 	
 	//상품상세정보용
 	public List detailProduct(int code) throws SQLException{
-		String sql = "select * from product where product_code = "+code;
+		String sql = "select * from product where product_code = "+1;
 		List list = new ArrayList();
 		
 		try {

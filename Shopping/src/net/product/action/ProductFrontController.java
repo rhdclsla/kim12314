@@ -14,13 +14,13 @@ import net.action.ActionForward;
 public class ProductFrontController extends HttpServlet implements javax.servlet.Servlet{
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
 			 	throws ServletException, IOException {
-		System.out.println("01");
+		
 		String RequestURI=request.getRequestURI();
-		System.out.println("001");
+		
 		String contextPath=request.getContextPath();
-		System.out.println("0001");
+		
 		String command=RequestURI.substring(contextPath.length());
-		System.out.println("00001");
+		
 		ActionForward forward=null;
 		Action action=null;
 		
@@ -41,10 +41,16 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./product/Product_add.jsp");
-		}
+		}else if(command.equals("/product/ProductDeleteAction.po")) {
+			System.out.println("go");
+			forward=new ActionForward();
+			System.out.println("gogo");
+			forward.setRedirect(false);
+			System.out.println("gogogo");
+			forward.setPath("ProductDeleteAction.po");
+			System.out.println(command);
+	}
 //		else if(command.equals()) {
-//			
-//		}else if(command.equals()) {
 //			
 //		}else if(command.equals()) {
 //			
