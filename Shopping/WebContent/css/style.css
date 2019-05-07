@@ -146,12 +146,7 @@ body {
 	align: center;
 }
 
-#footer {
-	clear: both;
-	padding: 20px; <!--
-	border: 1px solid #bcbcbc;
-	-->
-}
+
 
 
 @media ( max-width : 480px ) {
@@ -207,4 +202,15 @@ body {
 	position: absolute;
 	top: 130px;
 	left: 1260px;
+}
+.list{
+	
+	
+}
+#footer {
+	position:absolute;
+	clear: both;
+	padding: 20px; <!--
+	border: 1px solid #bcbcbc;
+	-->
 }

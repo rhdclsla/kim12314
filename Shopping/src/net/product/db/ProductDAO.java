@@ -169,7 +169,7 @@ public class ProductDAO {
 		  		productbean.setProduct_price(re.getInt("product_price"));
 		  		productbean.setProduct_detail(re.getString("product_detail"));
 		  		String date = String.valueOf(re.getTimestamp("product_date"));
-		  		productbean.setProduct_image(date);
+		  		productbean.setProduct_date(date);
 		  		list.add(productbean);
 	  		}
 	  		

@@ -43,14 +43,13 @@ public class MemberAddAction implements Action{
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
 		out.println("alert('Congratulation Join is complited')");
+		out.println("location.href='main.po'");
 		out.print("</script>");
 		out.close();
 		
-		ActionForward forward = new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("main.mo");
+		
 		memberdao.connClose();
-		return forward;
+		return null;
 	 }
 }
 
