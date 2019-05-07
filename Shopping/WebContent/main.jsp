@@ -63,44 +63,7 @@
 
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<%if(session.getAttribute("id")!=null){ %>
-				<a href="MemberLogoutAction.mo">로그아웃</a>
-				<a href="www.daum.net">장바구니</a> 
-				<a href="ProductOrderAction.po">주문</a>
-			<%}else{ %>
-				<a href="MemberLoginForm.mo">로그인</a>
-				<a href ="MemberAddView.mo">회원가입</a>
-			<%} %>	
-				<a href="www.nate.com">공지사항</a>
-				<a href="BoardList.bo">Q&A</a> 
-				<a href="www.naver.com">리뷰</a>
-		</div>
-		<div id="index">
-			<a href="main.jsp"><img src="image/h1Logo.png"></a>
-		</div>
-		<div id="menubar">
-			<ul>
-				<li><a href="#">ABOUT MAXIM</a></li>
-				<li><a href="#">PRODUCT</a></li>
-				<li><a href="#">EVENT</a></li>
-				<li><a href="#">NEWS&MEDIA</a></li>
-				<li><a href="#">CUSTOMER</a></li>
-			</ul>
-
-		</div>
-		<!-- 배너사진 -->
-		<div class="banner">
-			<ul>
-				<li><img src="image/hori.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori4.jpg" width="900" height="555px"></li>
-				<li><img src="image/hori2.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori5.jpg" width="750" height="555px"></li>
-				<li><img src="image/hori3.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori6.jpg" width="900" height="555px"></li>
-			</ul>
-		</div>
+	
 
 
 		<div class="board">
