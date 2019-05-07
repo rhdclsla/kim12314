@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="net.product.db.ProductBean"%>
+<%@page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +9,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+	List<ProductBean> beans = (List<ProductBean>)session.getAttribute("productbean");
+%>
 <table border="1">
 	<tr>
-	<td><a href="add.jsp">코드</a></td>
-	<td><a href="add.jsp">상품이름</a></td>
-	<td><a href="add.jsp">상품등록일</a></td>
+		<td>코드</td>
+		<td>상품이름</td>
+		<td>가격</td>
+		<td>재고</td>
+		<td>상품등록일</td>
 	</tr>
+	<%for(ProductBean bean : beans){ %>
 	<tr>
-		<td></td><td></td><td></td>
+		<td><a href="ProductDetailAction.mo?id=<%=bean.getProduct_code() %>">
+         <%=bean.getProduct_code() %>
+         </a></td>
+		<td><%=bean.getProduct_name() %></td>
+		<td><%=bean.getProduct_count() %></td>
+		<td><%=bean.getProduct_price() %></td>
+		<td><%=bean.getProduct_date() %></td>
 	</tr>
+	<%} %>
 </table>
+<input type="button" value = "수정" onclick = "ProductUpdateAction.po"/>
 </body>
 </html>

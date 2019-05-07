@@ -78,15 +78,29 @@ implements javax.servlet.Servlet {
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
+		}else if(command.equals("/AdminPage.mo")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./Admin_page.jsp");
+		}else if(command.equals("/MemberLogoutAction.mo")) {
+			action = new MemberLogoutAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
 		
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());
+			return;
 		}else{
 			RequestDispatcher dispatcher=
 					request.getRequestDispatcher(forward.getPath());
 			dispatcher.forward(request, response);
+			return;
 		}
 	 }
 	 

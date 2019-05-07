@@ -45,7 +45,7 @@
 </head>
 <body>
 
-  <br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br>
    <table border=1 width=300 style="margin : auto">
       <tr><td class="b" colspan=2 >Member List</td></tr>
    <%List<MemberBean> beans = (List<MemberBean>)session.getAttribute("memberbean");

@@ -44,6 +44,7 @@ public class MemberDAO {
 			e.printStackTrace();
 		}finally{
 			try{
+				if(re!=null){re.close(); re = null;}
 				if(pt!=null){pt.close(); pt = null;}  //닫아줌
 			}catch(Exception e){
 				e.printStackTrace();
@@ -121,18 +122,18 @@ public class MemberDAO {
 	  		
 	  		
 		  	MemberBean memberbean = new MemberBean();
-	  		memberbean.setMember_id(re.getString("id"));
-	  		memberbean.setMember_pw(re.getString("pw"));
-	  		memberbean.setMember_name(re.getString("name"));
-	  		memberbean.setMember_jumin(re.getString("jumin"));
-	  		memberbean.setMember_birth(re.getString("birth"));
-	  		memberbean.setMember_email(re.getString("email"));
-	  		memberbean.setMember_postcode(re.getString("zip"));
-	  		memberbean.setMember_address(re.getString("address"));
-	  		memberbean.setMember_phone(re.getString("phone"));
-	  		String date = String.valueOf(re.getTimestamp("date"));
+	  		memberbean.setMember_id(re.getString("member_id"));
+	  		memberbean.setMember_pw(re.getString("member_pw"));
+	  		memberbean.setMember_name(re.getString("member_name"));
+	  		memberbean.setMember_jumin(re.getString("member_jumin"));
+	  		memberbean.setMember_birth(re.getString("member_birth"));
+	  		memberbean.setMember_email(re.getString("member_email"));
+	  		memberbean.setMember_postcode(re.getString("member_postcode"));
+	  		memberbean.setMember_address(re.getString("member_address"));
+	  		memberbean.setMember_phone(re.getString("member_phone"));
+	  		String date = String.valueOf(re.getTimestamp("member_date"));
 	  		memberbean.setMember_date(date);
-	  		memberbean.setMember_point(re.getInt("point"));
+	  		memberbean.setMember_point(re.getInt("member_point"));
 	  	
 	  		
 	  		return memberbean;
@@ -142,6 +143,7 @@ public class MemberDAO {
 			se.printStackTrace();
 		}finally {
 			try{
+				if(re!=null){re.close(); re = null;}
 				if(pt!=null){pt.close(); pt = null;}  //닫아줌
 			}catch(Exception e){
 				e.printStackTrace();
@@ -152,24 +154,25 @@ public class MemberDAO {
 	
 	//회원정보 리스트용
 		public List getMemberList() throws SQLException {
+			String sql = "select * from member where member_id != 'admin'";
 			List list = new ArrayList();
 			try{	   
-		  		pt = conn.prepareStatement("select * from member where member_id != 'admin'");
+		  		pt = conn.prepareStatement(sql);
 		  		re = pt.executeQuery();
 		  		while(re.next()) {
 			  		MemberBean memberbean = new MemberBean();
-			  		memberbean.setMember_id(re.getString("id"));
-			  		memberbean.setMember_pw(re.getString("pw"));
-			  		memberbean.setMember_name(re.getString("name"));
-			  		memberbean.setMember_jumin(re.getString("jumin"));
-			  		memberbean.setMember_birth(re.getString("birth"));
-			  		memberbean.setMember_email(re.getString("email"));
-			  		memberbean.setMember_postcode(re.getString("zip"));
-			  		memberbean.setMember_address(re.getString("address"));
-			  		memberbean.setMember_phone(re.getString("phone"));
-			  		String date = String.valueOf(re.getString("date"));
+			  		memberbean.setMember_id(re.getString("member_id"));
+			  		memberbean.setMember_pw(re.getString("member_pw"));
+			  		memberbean.setMember_name(re.getString("member_name"));
+			  		memberbean.setMember_jumin(re.getString("member_jumin"));
+			  		memberbean.setMember_birth(re.getString("member_birth"));
+			  		memberbean.setMember_email(re.getString("member_email"));
+			  		memberbean.setMember_postcode(re.getString("member_postcode"));
+			  		memberbean.setMember_address(re.getString("member_address"));
+			  		memberbean.setMember_phone(re.getString("member_phone"));
+			  		String date = String.valueOf(re.getTimestamp("member_date"));
 			  		memberbean.setMember_date(date);
-			  		memberbean.setMember_point(re.getInt("point"));
+			  		memberbean.setMember_point(re.getInt("member_point"));
 		  			list.add(memberbean);
 		  		}
 		  		
@@ -177,6 +180,7 @@ public class MemberDAO {
 		  		
 			}finally{
 				try{
+					if(re!=null){re.close(); re = null;}
 					if(pt!=null){pt.close(); pt = null;}  //닫아줌
 				}catch(Exception e){
 					e.printStackTrace();
