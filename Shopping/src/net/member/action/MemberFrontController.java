@@ -82,10 +82,6 @@ implements javax.servlet.Servlet {
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./Admin_page.jsp");
-		}else if(command.equals("/main.mo")) {
-			forward=new ActionForward();
-			forward.setRedirect(false);
-			forward.setPath("./main.jsp");
 		}else if(command.equals("/MemberLogoutAction.mo")) {
 			action = new MemberLogoutAction();
 			try {
@@ -99,10 +95,12 @@ implements javax.servlet.Servlet {
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());
+			return;
 		}else{
 			RequestDispatcher dispatcher=
 					request.getRequestDispatcher(forward.getPath());
 			dispatcher.forward(request, response);
+			return;
 		}
 	 }
 	 

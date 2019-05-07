@@ -6,10 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css"/>
 <style type="text/css">
 
 h1 {font-size: 3em; margin: 20px 0; color: #FFF;}
-.container {width: 1000px; margin: 10px auto;}
+
 ul.tabs {
 	margin: 0;
 	padding: 0;
@@ -87,9 +88,9 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 </head>
 </head>
 <body>
-<div align="center"><b>ORDER</b></div>
-<div class="container">
 
+<div class="container">
+	<div><jsp:include page="/header.jsp"></jsp:include></div>
 
     <ul class="tabs">
         <li><a href="#tab1">주문내역조회(0)</a></li>

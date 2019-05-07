@@ -112,15 +112,13 @@ public class MemberDAO {
 	
 	//회원정보 가져오기
 	public MemberBean getMemDetail(String id) throws SQLException {
-		String sql = "select * from test where id = ?";
+		String sql = "select * from test where member_id = ?";
 		try{	   
 	  		pt = conn.prepareStatement(sql);
 	  		pt.setString(1, id);
 	  		re = pt.executeQuery();
 	  		
 	  		if(!re.next()) {return null;}
-	  		
-	  		
 		  	MemberBean memberbean = new MemberBean();
 	  		memberbean.setId(re.getString("id"));
 	  		memberbean.setPw(re.getString("pw"));
@@ -138,6 +136,7 @@ public class MemberDAO {
 			se.printStackTrace();
 		}finally {
 			try{
+				if(re!=null){re.close(); re = null;}
 				if(pt!=null){pt.close(); pt = null;}  //닫아줌
 			}catch(Exception e){
 				e.printStackTrace();

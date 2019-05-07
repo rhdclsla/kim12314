@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Bottom</title>
 </head>
 <body>
-
+		<div id="footer">
+			<p>Copyright</p>
+		</div>
 </body>
 </html>
