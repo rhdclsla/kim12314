@@ -13,11 +13,7 @@
 	<%
 		List<ProductBean> beans = (List<ProductBean>) session.getAttribute("productbean");
 	%>
-	<%
-		ProductBean bean = (ProductBean) request.getAttribute("ProductList");
-		ProductDAO PD_code = (ProductDAO) request.getAttribute("Product_code");
-		ProductDAO PD_id = (ProductDAO) request.getAttribute("Product_id");
-	%>
+
 	<table border="1">
 		<tr>
 			<td>코드</td>

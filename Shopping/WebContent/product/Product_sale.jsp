@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>상품주문</title>
 </head>
 <body>
 
@@ -25,11 +25,8 @@
 <form method="post" action="Product_order.jsp" >
 	<table border="1">
 		<tr>
-	
-		
-	
 			<td> 
-								
+					가격: <%=request.getParameter("Product_price") %>
 			</td>
 			<td>
 				수량: <input type="text" id="Order_count" name="Order_conut">개<br>
