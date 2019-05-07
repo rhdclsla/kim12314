@@ -1,7 +1,8 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="net.product.db.ProductBean"%>
-<%@page improt="net.product.db.ProductDAO"%>
+<%@page import="net.product.db.ProductDAO"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +12,7 @@
 </head>
 <body>
 	<%
-		List<ProductBean> beans = (List<ProductBean>) session.getAttribute("productbean");
+		List<ProductBean> beans = (List<ProductBean>)session.getAttribute("productbean");
 	%>
 
 	<table border="1">
