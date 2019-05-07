@@ -18,7 +18,11 @@
 		<div><jsp:include page="banner.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="best.jsp" flush="false"></jsp:include></div>
 	<%-- 	<div><jsp:include page="board_2.jsp" flush="false"></jsp:include></div>
-	 --%>	<div><jsp:include page="bottom.jsp" flush="false"></jsp:include></div>
+	
+	 --%>	
+	 <div><jsp:include page="bottom1.jsp" flush="false"></jsp:include></div>
+	 <div><jsp:include page="bottom.jsp" flush="false"></jsp:include></div>
+			
 	</div>
 </body>
 </html>

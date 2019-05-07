@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div id="container">
 	<div class="best">
 		<div class="line1">
 			<p>
@@ -40,6 +41,6 @@
 			</p>
 		</div>
 	</div>
-
+</div>
 </body>
 </html>

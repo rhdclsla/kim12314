@@ -4,16 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bottom</title>
+<title>Insert title here</title>
 </head>
 <body>
-
-	<div id="footer">
-		<p>
-			<a href="#header"><img src="image/bottom1.png" width="70px"
-				height="70px" /></a>
-		</p>
-	</div>
-
+		<div id="footer1">
+			<p>
+				<img src="image/tel.gif" />
+			</p>
+		</div>
 </body>
 </html>

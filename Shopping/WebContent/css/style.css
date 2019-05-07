@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
 	align: center;
 }
@@ -45,7 +46,6 @@ body {
 }
 
 .menubar li {
-	
 	float: left;
 	padding: 0px;
 	list-style: none;
@@ -62,7 +62,6 @@ body {
 	padding: 0px 25px;
 	text-align: center;
 	text-decoration: none;
-	
 }
 
 .menubar li a:hover, .menubar ul li:hover a {
@@ -122,16 +121,14 @@ body {
 	clear: left;
 }
 
-
-.best { 
-	 text-align: center
+.best {
+	text-align: center;
 	width: 2000px;
 	float: left;
 	position: absolute;
 	top: 830px;
 	left: 200px;
-	border: 1px solid #bcbcbc;
-} 
+}
 
 #board {
 	width: 1065px;
@@ -145,19 +142,6 @@ body {
 	align: center;
 }
 
-#footer {
-/* 	position : fixed;
-	
-	clear: both;
-	padding: 20px; 
-	border: 1px solid #bcbcbc;
- */
-	position: fixed;
-	right:0;
-	bottom: 0;
-height: 100px;
-
-}
 
 
 @media ( max-width : 480px ) {
@@ -176,14 +160,15 @@ height: 100px;
 
 .banner {
 	position: absolute;
-	width: 1250px;	height: 680px;
+	width: 1250px;
+	height: 680px;
 	top: 160px;
 	left: 300px;
 	padding: 0;
 	margin: 0 auto;
 	overflow: hidden;
 	margin: 0 auto;
-	align:center;
+	align: center;
 }
 
 .banner ul {
@@ -194,47 +179,76 @@ height: 100px;
 }
 
 .banner ul li {
-	float: left;	width: 1250px;	height: 680px;
+	float: left;
+	width: 1250px;
+	height: 680px;
 	margin: 0;
 	padding: 0;
 }
-
-
 
 .line1 {
 	position: absolute;
 	top: 50px;
 	left: 100px;
 	margin-bottom: 20;
-	float:left;
+	float: left;
 }
 
- .line2 {
+.line2 {
 	position: absolute;
 	top: 50px;
 	left: 350px;
 }
+
 .line3 {
 	position: absolute;
 	top: 50px;
 	left: 600px;
 	margin-bottom: 20;
 }
+
 .line4 {
 	position: absolute;
-	top:50px;
+	top: 50px;
 	left: 850px;
 	margin-bottom: 20;
 }
+
 .line5 {
 	position: absolute;
 	top: 50px;
 	left: 1100px;
 	margin-bottom: 20;
 }
+
 .line6 {
 	position: absolute;
 	top: 50px;
 	left: 1400px;
 	margin-bottom: 20;
-} 
+}
+#footer {
+	/* 	position : fixed;
+	
+	clear: both;
+	padding: 20px; 
+	border: 1px solid #bcbcbc;
+ */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin-bottom: 20px;
+	height: 100px;
+}
+
+#footer1 {
+	/* 	position : fixed;
+	clear: both;
+	padding: 20px; 
+	border: 1px solid #bcbcbc;
+ */
+ 	top:1200px;
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+}
