@@ -31,9 +31,10 @@ public class ProductDeleteAction implements Action{
 		}else{
 			return null;
 		}
+		System.out.println("z");
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("상품등록 페이지");
+		forward.setPath("Product_order.po");
 		productdao.conClose();
 		return forward;
 		
