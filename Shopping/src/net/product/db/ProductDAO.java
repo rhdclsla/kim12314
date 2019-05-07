@@ -13,6 +13,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import net.member.db.MemberBean;
+
 public class ProductDAO {
 	
 	Connection conn = null;
@@ -142,6 +144,44 @@ public class ProductDAO {
 			try {
 				if(pt!=null) {conClose(); pt.close();}
 			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
+	//상품리스트용
+	public List getListProduct() throws SQLException{
+		String sql = "select * from product";
+		List list = new ArrayList();
+		
+		try{	   
+	  		pt = conn.prepareStatement(sql);
+	  		re = pt.executeQuery();
+	  		while(re.next()) {
+		  		ProductBean productbean = new ProductBean();
+		  		productbean.setProduct_code(re.getInt("product_code"));
+		  		productbean.setProduct_category(re.getString("product_category"));
+		  		productbean.setProduct_name(re.getString("product_name"));
+		  		productbean.setProduct_count(re.getInt("product_count"));
+		  		productbean.setProduct_image(re.getString("product_image"));
+		  		productbean.setProduct_cost(re.getInt("product_cost"));
+		  		productbean.setProduct_price(re.getInt("product_price"));
+		  		productbean.setProduct_detail(re.getString("product_detail"));
+		  		String date = String.valueOf(re.getTimestamp("product_date"));
+		  		productbean.setProduct_image(date);
+		  		list.add(productbean);
+	  		}
+	  		
+	  		return list;
+	  		
+		}catch(RuntimeException er) {
+			er.printStackTrace();
+		}finally{
+			try{
+				if(re!=null){re.close(); re = null;}
+				if(pt!=null){pt.close(); pt = null;}  //닫아줌
+			}catch(Exception e){
 				e.printStackTrace();
 			}
 		}

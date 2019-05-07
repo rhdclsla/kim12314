@@ -12,7 +12,7 @@
 		<a href="www.naver.com">REVIEW</a> <a href="www.daum.net">Q&A</a> 
 		<a href="www.google.com">NOTICE</a> <a href="order.jsp">ORDER</a> 
 		<a href="basket.jsp">BASKET</a> <a href="login.jsp">LOGIN</a>
-	</div>
+</div>
 
 
 	<div id="index">
@@ -33,6 +33,7 @@
 					<li><a href="#">Galleries</a></li>
 					<li><a href="#">Apghghghps</a></li>
 					<li><a href="#">Extensions</a></li>
+
 				</ul>
 			</li>
 			<li><a href="#">EVENT</a></li>
