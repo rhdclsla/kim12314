@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -72,7 +72,8 @@
 				<li><img src="image/hori5.jpg" width="750" height="555px"></li>
 				<li><img src="image/hori3.jpg" width="500" height="555px"></li>
 				<li><img src="image/hori6.jpg" width="900" height="555px"></li>
-			</ul>
+			
+		</ul>
 		</div>
 </body>
 </html>

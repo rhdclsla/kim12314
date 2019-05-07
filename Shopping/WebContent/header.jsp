@@ -6,14 +6,10 @@
 <meta charset="UTF-8">
 <title>Header</title>
 <link rel="stylesheet" href="css/style.css"/>
-<style>
-	#header{
-		text-align : center;
-	}
-</style>
 </head>
 <body>
 	<div id="header" class="header">
+
 	<%if(session.getAttribute("id")!=null) {%>
 		<%if(session.getAttribute("id").equals("admin")){ %>
 			<a href="AdminPage.mo">ADMINPAGE</a>
@@ -35,6 +31,11 @@
 		<a href="main.jsp"><img src="image/h1Logo.png" width="200px"
 			height="70px"></a>
 	</div>
+
+
+
+
+	
 	<div class="menubar">
 		<ul>
 			<li><a href="#">ABOUT MAXIM</a></li>
@@ -44,7 +45,9 @@
 					<li><a href="#">Galleries</a></li>
 					<li><a href="#">Apghghghps</a></li>
 					<li><a href="#">Extensions</a></li>
-				</ul></li>
+
+				</ul>
+			</li>
 			<li><a href="#">EVENT</a></li>
 			<li><a href="#">NEWS&MEDIA</a></li>
 			<li><a href="#">CUSTOMER</a></li>
