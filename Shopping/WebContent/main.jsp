@@ -156,7 +156,7 @@ body {
 
 .banner ul {
 	position: relative;
-	margin: 0px;
+	text-align: center;
 	padding: 0;
 	list-style: none;
 }
@@ -212,9 +212,17 @@ body {
 <body>
 	<div id="container">
 		<div id="header">
-			<a href="www.naver.com">로그인</a> <a href="www.daum.net">장바구니</a> <a
-				href="www.google.com">주문</a> <a href="www.nate.com">공지사항</a> <a
-				href="www.naver.com">Q&A</a> <a href="www.naver.com">리뷰</a>
+			<%if(session.getAttribute("id")!=null){ %>
+				<a href="MemberLogoutAction.mo">로그아웃</a>
+				<a href="www.daum.net">장바구니</a> 
+				<a href="ProductOrderAction.po">주문</a>
+			<%}else{ %>
+				<a href="MemberLoginForm.mo">로그인</a>
+				<a href ="MemberAddView.mo">회원가입</a>
+			<%} %>	
+				<a href="www.nate.com">공지사항</a>
+				<a href="BoardList.bo">Q&A</a> 
+				<a href="www.naver.com">리뷰</a>
 		</div>
 		<div id="index">
 			<a href="main.jsp"><img src="image/h1Logo.png"></a>
@@ -232,11 +240,12 @@ body {
 		<!-- 배너사진 -->
 		<div class="banner">
 			<ul>
-				<li><img src="M1.jpg" width="1000" height="555px"></li>
-				<li><img src="M2.jpg" width="1000" height="555px"></li>
-				<li><img src="M3.jpg" width="1000" height="555px"></li>
-				<li><img src="M4.jpg" width="1000" height="555px"></li>
-				<li><img src="M5.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M1.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M2.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M3.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M4.jpg" width="1000" height="555px"></li>
+				<li><img src="image/M5.jpg" width="1000" height="555px"></li>
+				<li><img src="image/hori.jpg" width="600" height="555px"></li>
 			</ul>
 		</div>
 

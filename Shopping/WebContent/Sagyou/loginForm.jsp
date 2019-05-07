@@ -31,8 +31,7 @@
                   <tr><td align=center><b><font size=7> PASS : </font></td><td><input type="password" name="pw" id = "pw" style="width:250pt; height:30pt;font-size:18pt; background-color:transparent;"></b></td></tr>
                   <tr>
                   <td colspan="2" align=center>
-                 <b><input type="submit" value="login" style="width:60pt; height:30pt; font-size:18pt; background-color:transparent;">   </b>              
-         &emsp; &emsp;<b><a href ="MemberAddView.mo" style="font-size:20pt; color:black;">joinus</a> </b> 
+                 <b><input type="submit" value="login" style="width:60pt; height:30pt; font-size:18pt; background-color:transparent;">   </b>
               </td>
             </tr>
         </table>
