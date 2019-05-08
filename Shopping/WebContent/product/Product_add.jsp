@@ -35,7 +35,7 @@
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
-      <td colspan="5"><a href="./image.jsp">이미지</a></td>
+      <td colspan="5"><a href="./product/image.jsp">이미지</a></td>
       <td><input type="text" name = "image" id = "image" value="<%=request.getParameter("image")%>" readonly/></td>
       
       
