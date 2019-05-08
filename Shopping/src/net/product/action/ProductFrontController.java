@@ -34,10 +34,14 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/product/Product_add.po")) {
+		}else if(command.equals("/ProductAddForm.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("Product_add.jsp");
+			forward.setPath("./product/Product_add.jsp");
+		}else if(command.equals("/product/ProductAddForm.po")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./Product_add.jsp");
 		}else if(command.equals("/main.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
@@ -60,12 +64,30 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
+		}else if(command.equals("/product/ProductListAction.po")) {
+			action = new ProductListAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}else if(command.equals("/ProductList.po")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
 
 			forward.setPath("./product/Product_list.jsp");
-		}
+		}else if(command.equals("/product/ProductList.po")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./Product_list.jsp");
+		}else if(command.equals("/ProductInfoAction.po")) {
+	         action = new ProductInfoAction();
+	         try {
+	            forward = action.execute(request, response);
+	         }catch(Exception e) {
+	            e.printStackTrace();
+	         }
+	      }
 
 		
 		if(forward.isRedirect()){

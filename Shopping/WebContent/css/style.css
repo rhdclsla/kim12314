@@ -1,4 +1,6 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
+
+
 body {
 	align: center;
 }
@@ -28,7 +30,6 @@ body {
 	height: 20px;
 	padding: 10px;
 	margin-bottom: 5px;
-
 }
 
 #header a {
@@ -78,9 +79,10 @@ body {
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
-	position: fixed;
+	position: absolute;
 	width: 200px;
-	z-index: 200;
+	z-index: 1;
+
 }
 
 .menubar li:hover ul {
@@ -105,7 +107,7 @@ body {
 	display: block;
 	height: 50px;
 	font-size: 25px;
-	font-weight: nomal;
+	font-weight: normal;
 	margin: 0px;
 	text-align: left;
 }
@@ -121,20 +123,17 @@ body {
 	clear: left;
 }
 
-
-#board { 
-	width:100px;
-	height: 425px;
-	padding: 60px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	float: right;
-	border: 1px solid #bcbcbc; <!--
-	align: center;
-	-->
+.best {
+	text-align: center;
+	width: 2000px;
+	float: left;
+	position: absolute;
+	top: 830px;
+	left: 230px;
 }
 
-#best {
+
+#board {
 	width: 1065px;
 	height: 200px;
 	padding: 20px;
@@ -144,13 +143,6 @@ body {
 	float: right;
 	border: 1px solid #bcbcbc;
 	align: center;
-}
-
-#footer {
-	clear: both;
-	padding: 20px; <!--
-	border: 1px solid #bcbcbc;
-	-->
 }
 
 
@@ -170,15 +162,16 @@ body {
 
 .banner {
 	position: absolute;
-	width: 1010px;
-	height: 555px;
-	top: 160px;
-	left: 35px;
+	width: 1250px;
+	height: 680px;
+	top: 200px;
+	left: 300px;
 	padding: 0;
 	margin: 0 auto;
 	overflow: hidden;
 	margin: 0 auto;
-	text-align : center;
+	text-align: center;
+
 }
 
 .banner ul {
@@ -190,21 +183,77 @@ body {
 
 .banner ul li {
 	float: left;
-	width: 1020px;
-	height: 555px;
+	width: 1250px;
+	height: 680px;
 	margin: 0;
 	padding: 0;
 }
 
 .line1 {
 	position: absolute;
-	top: 130px;
-	left: 1060px;
+	top: 50px;
+	left: 100px;
 	margin-bottom: 20;
+	float: left;
+
 }
 
 .line2 {
 	position: absolute;
-	top: 130px;
-	left: 1260px;
+	top: 50px;
+	left: 350px;
+}
+
+.line3 {
+	position: absolute;
+	top: 50px;
+	left: 600px;
+	margin-bottom: 20;
+}
+
+.line4 {
+	position: absolute;
+	top: 50px;
+	left: 850px;
+	margin-bottom: 20;
+}
+
+.line5 {
+	position: absolute;
+	top: 50px;
+	left: 1100px;
+	margin-bottom: 20;
+}
+
+.line6 {
+	position: absolute;
+	top: 50px;
+	left: 1400px;
+	margin-bottom: 20;
+}
+#footer {
+	/* 	position : fixed;
+	
+	clear: both;
+	padding: 20px; 
+	border: 1px solid #bcbcbc;
+ */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin-bottom: 20px;
+	height: 100px;
+}
+
+#footer1 {
+	/* 	position : fixed;
+	clear: both;
+	padding: 20px; 
+	border: 1px solid #bcbcbc;
+ */
+ 	top:1200px;
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+
 }

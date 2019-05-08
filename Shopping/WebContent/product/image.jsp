@@ -1,8 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>jQuery Event</title>
+  <title>이미지등록</title>
   <style>
   body {
     margin: 20px;
@@ -16,7 +18,7 @@
 
  </head>
  <body>
-    <form action="Product_add.jsp">
+    <form action="ProductAddForm.po">
     <p>
         <label for="image">Image:</label>
         <br />
@@ -25,7 +27,7 @@
     <input type="submit" value="전송">
     </form>
     <div id="image_preview">
-        <img src="#"  width="100" height="100"/>
+        <img src="#"  width="600" height="600"/>
         <br />
         <a href="#">Remove</a>
     </div>

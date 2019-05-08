@@ -66,12 +66,12 @@
 <!-- 배너사진 -->
 		<div class="banner">
 			<ul>
-				<li><img src="image/hori.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori4.jpg" width="900" height="555px"></li>
-				<li><img src="image/hori2.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori5.jpg" width="750" height="555px"></li>
-				<li><img src="image/hori3.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori6.jpg" width="900" height="555px"></li>
-			</ul>
+				<li><img src="image/hori.jpg" width="500" height="600px"></li>
+				<li><img src="image/hori4.jpg" width="900" height="600px"></li>
+				<li><img src="image/hori2.jpg" width="500" height="600px"></li>
+				<li><img src="image/hori5.jpg" width="750" height="600px"></li>
+				<li><img src="image/hori3.jpg" width="500" height="600px"></li>
+				<li><img src="image/hori6.jpg" width="900" height="600px"></li>		
+				</ul>
 		</div>
 </body>

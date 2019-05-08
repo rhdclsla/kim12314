@@ -33,21 +33,13 @@ public class MemberLoginAction implements Action {
 			return null;
 		}
 		
-		if(memberbean.getMember_id().equals("admin")) {
-			session.setAttribute("id", memberbean.getMember_id());
-			ActionForward forward= new ActionForward();
-			forward.setRedirect(true);
-	   		forward.setPath("./AdminPage.mo");
-	   		memberdao.connClose();
-			return forward;
-		}else {
-			session.setAttribute("id", memberbean.getMember_id());
-			ActionForward forward= new ActionForward();
-			forward.setRedirect(true);
-	   		forward.setPath("main.po");
-	   		memberdao.connClose();
-			return forward;
-		}
+		session.setAttribute("id", memberbean.getMember_id());
+		ActionForward forward= new ActionForward();
+		forward.setRedirect(true);
+	   	forward.setPath("main.po");
+	   	memberdao.connClose();
+		return forward;
+
 		
 	 }
 }
