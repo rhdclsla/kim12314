@@ -108,4 +108,6 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doProcess(request, response);
 	}
+
 }
+

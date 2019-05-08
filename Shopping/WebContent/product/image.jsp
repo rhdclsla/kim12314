@@ -24,10 +24,16 @@
         <br />
         <input type="file" name="image" id="image" />
     </p>
+    
     <input type="submit" value="전송">
     </form>
     <div id="image_preview">
-        <img src="#"  width="600" height="600"/>
+  	<script type="text/javascript" src="<c:url value='/js/jquery.1.9.1.min.js'/>"></script>
+  	<img src="#"  width="500" height="500" id="image" name="image" />
+       
+
+
+    
         <br />
         <a href="#">Remove</a>
     </div>

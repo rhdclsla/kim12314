@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<div id="footer1">
-			<p>
-				<img src="image/tel.gif" />
-			</p>
-		</div>
+<img src="C:\Users\user\Desktop\batang.png" />
+
+	
 </body>
 </html>
