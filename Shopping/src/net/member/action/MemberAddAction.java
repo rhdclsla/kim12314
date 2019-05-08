@@ -46,8 +46,7 @@ public class MemberAddAction implements Action{
 		out.println("location.href='main.po'");
 		out.print("</script>");
 		out.close();
-		
-		
+
 		memberdao.connClose();
 		return null;
 	 }

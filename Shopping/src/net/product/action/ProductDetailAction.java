@@ -16,7 +16,7 @@ public class ProductDetailAction implements Action{
 		HttpSession session = request.getSession();
 		ProductDAO productdao = new ProductDAO();
 		
-		int code = Integer.parseInt(request.getParameter("product_code"));
+		int code = Integer.parseInt(request.getParameter("code"));
 		
 		if(productdao.detailProduct(code) == null) {
 			PrintWriter out = response.getWriter();
@@ -26,10 +26,10 @@ public class ProductDetailAction implements Action{
 			out.close();
 			return null;
 		}
-		session.setAttribute("detailproduct", productdao.detailProduct(code));
+		session.setAttribute("detailProduct", productdao.detailProduct(code));
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("상품등록 페이지");
+		forward.setPath("");
 		productdao.conClose();
 		return forward;
 		

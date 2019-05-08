@@ -15,13 +15,13 @@ public class ProductAddAction implements Action{
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		ProductDAO productdao = new ProductDAO();
 		ProductBean productbean = new ProductBean();
-		request.setCharacterEncoding("UTF-8");
 		
-		productbean.setProduct_code(Integer.parseInt(request.getParameter("code")));
 		productbean.setProduct_category(request.getParameter("category"));
 		productbean.setProduct_name(request.getParameter("name"));
 		productbean.setProduct_count(Integer.parseInt(request.getParameter("count")));
 		productbean.setProduct_image(request.getParameter("image"));
+		System.out.println(Integer.parseInt(request.getParameter("cost")));
+		System.out.println(Integer.parseInt(request.getParameter("price")));
 		productbean.setProduct_cost(Integer.parseInt(request.getParameter("cost")));
 		productbean.setProduct_price(Integer.parseInt(request.getParameter("price")));
 		productbean.setProduct_detail(request.getParameter("detail"));
@@ -35,10 +35,15 @@ public class ProductAddAction implements Action{
 			out.close();
 			return null;
 		}
-		
+//		PrintWriter out = response.getWriter();
+//		out.println("<script>");
+//		out.println("alert('Register is complited')");
+//		out.println("location.href='./ProductList.po'");
+//		out.print("</script>");
+//		out.close();
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("Product_add.po");
+		forward.setPath("ProductListAction.po");
 		productdao.conClose();
 		return forward;
 		
