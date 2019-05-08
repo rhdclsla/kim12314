@@ -76,7 +76,14 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./Product_list.jsp");
-		}
+		}else if(command.equals("/ProductInfoAction.po")) {
+	         action = new ProductInfoAction();
+	         try {
+	            forward = action.execute(request, response);
+	         }catch(Exception e) {
+	            e.printStackTrace();
+	         }
+	      }
 
 		
 		if(forward.isRedirect()){
