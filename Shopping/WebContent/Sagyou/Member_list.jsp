@@ -23,11 +23,11 @@ td {
 }
 
 .aa {
-	font-size: 20pt;
+	font-size: 15pt;
 }
 
 .b {
-	font-size: 25pt;
+	font-size: 20pt;
 }
 
 
@@ -54,7 +54,7 @@ table.style_Table td {
 	<div id="container">
 		<div><jsp:include page="/header.jsp"></jsp:include></div>
 <br><br><br><br><br><br><br>
-	<div style="font-size:40pt; font-weight: bold" align="center">Member List</div>
+	<div style="font-size:30pt; font-weight: bold" align="center">Member List</div>
 		<table class="style_Table" align="center">
 
 			<%List<MemberBean> beans = (List<MemberBean>)session.getAttribute("memberbean");

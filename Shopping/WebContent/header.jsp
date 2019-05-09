@@ -15,7 +15,7 @@
 			<a href="AdminPage.mo">ADMINPAGE</a>
 		<%}%>	
 			<a href="MemberLogoutAction.mo">LOGOUT</a>
-			<a href="www.daum.net">BASKET</a> 
+			<a href="basket.jsp">BASKET</a> 
 			<a href="ProductOrderAction.po">ORDER</a>
 	<%}else{ %>	
 			<a href="MemberLoginForm.mo">LOGIN</a>
@@ -48,8 +48,8 @@
                <li><a href="#">TASSIMO</a></li>
             </ul>
          </li>
-         <li><a href="#">EVENT</a></li>
-         <li><a href="#">NEWS&MEDIA</a></li>
+         <li><a href="event.jsp">EVENT</a></li>
+         <li><a href="news&media.jsp">NEWS&MEDIA</a></li>
          <li><a href="#">CUSTOMER</a></li>
       </ul>
    </div>

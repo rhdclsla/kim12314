@@ -7,30 +7,37 @@
 <html>
 <head>
 	<title>MVC °Ô½ÃÆÇ</title>
+	<link rel="stylesheet" href="css/style.css" />
 	<style type="text/css">
+
 	
-	body{
-      background-image: url("./Sagyou/1313.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      
-   }
+	
 </style>
 </head>
 
 <body>
+<div id="container">
+<div><jsp:include page="/header.jsp"></jsp:include></div>
 <!-- °Ô½ÃÆÇ ¼öÁ¤ -->
-<table cellpadding="0" cellspacing="0">
-	<tr align="center" valign="middle">
-		<td colspan="5">MVC °Ô½ÃÆÇ</td>
-	</tr>
+<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br>
+		<br>
+		
+<center><table cellpadding="0" cellspacing="0">
+	
 	
 	<tr>
-		<td style="font-family:µ¸À½; font-size:12" height="16">
+		<td style="font-family:µ¸À½; font-size:20" height="16">
 			<div align="center">Á¦ ¸ñ&nbsp;&nbsp;</div>
 		</td>
 		
-		<td style="font-family:µ¸À½; font-size:12">
+		<td style="font-family:µ¸À½; font-size:20">
 		<%=board.getBOARD_SUBJECT()%>
 		</td>
 	</tr>
@@ -41,13 +48,13 @@
 	</tr>
 	
 	<tr>
-		<td style="font-family:µ¸À½; font-size:12">
+		<td style="font-family:µ¸À½; font-size:20">
 			<div align="center">³» ¿ë</div>
 		</td>
-		<td style="font-family:µ¸À½; font-size:12">
-			<table border=0 width=490 height=250 style="table-layout:fixed">
+		<td style="font-family:µ¸À½; font-size:20">
+			<table border=0 width=700 height=400 style="table-layout:fixed">
 				<tr>
-					<td valign=top style="font-family:µ¸À½; font-size:12">
+					<td valign=top style="font-family:µ¸À½; font-size:20">
 					<%=board.getBOARD_CONTENT() %>
 					</td>
 				</tr>
@@ -55,10 +62,10 @@
 		</td>
 	</tr>
 	<tr>
-		<td style="font-family:µ¸À½; font-size:12">
+		<td style="font-family:µ¸À½; font-size:20">
 			<div align="center">Ã·ºÎÆÄÀÏ</div>
 		</td>
-		<td style="font-family:µ¸À½; font-size:12">
+		<td style="font-family:µ¸À½; font-size:20">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
 		<a href="./boardupload/<%=board.getBOARD_FILE()%>">
 			<%=board.getBOARD_FILE() %>
@@ -74,7 +81,7 @@
 	
 	<tr align="center" valign="middle">
 		<td colspan="5">
-			<font size=2>
+			<font size=4>
 			<a href="./BoardReplyAction.bo?num=<%=board.getBOARD_NUM() %>">
 			[´äº¯]
 			</a>&nbsp;&nbsp;
@@ -88,7 +95,8 @@
 			</font>
 		</td>
 	</tr>
-</table>
+</table></center>
 <!-- °Ô½ÃÆÇ ¼öÁ¤ -->
+</div>
 </body>
 </html>
