@@ -81,7 +81,7 @@
 	
 	<tr align="center" valign="middle">
 		<td colspan="5">
-			<font size=4>
+			<font size=5>
 			<a href="./BoardReplyAction.bo?num=<%=board.getBOARD_NUM() %>">
 			[´äº¯]
 			</a>&nbsp;&nbsp;

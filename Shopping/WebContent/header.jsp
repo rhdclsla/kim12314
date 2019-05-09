@@ -21,9 +21,9 @@
 			<a href="MemberLoginForm.mo">LOGIN</a>
 			<a href="MemberAddView.mo">JOIN</a>	
 	<%} %>
-			<a href="www.nate.com">NOTICE</a>
+			<a href="ReviewList.re">NOTICE</a>
 			<a href="BoardList.bo">Q&A</a> 
-			<a href="www.naver.com">REVIEW</a>	
+			<a href="ReviewList.re">REVIEW</a>	
 	</div>
 
 
@@ -49,7 +49,7 @@
             </ul>
          </li>
          <li><a href="event.jsp">EVENT</a></li>
-         <li><a href="news&media.jsp">NEWS&MEDIA</a></li>
+         <li><a href="NewsList.ne">NEWS&MEDIA</a></li>
          <li><a href="#">CUSTOMER</a></li>
       </ul>
    </div>
