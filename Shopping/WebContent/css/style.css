@@ -173,9 +173,7 @@ position: relative;
  .board2 img{
  	display:block;
  }
- 
- 
- 
+
 
 @media ( max-width : 480px ) {
 	#container {
@@ -241,8 +239,8 @@ position: relative;
 	top: 100px;
 	left: 795px;
 	margin-bottom: 20;
-}
 
+}
 .line4 {
 	position: absolute;
 	top: 100px;
@@ -266,18 +264,11 @@ position: relative;
 
 
 #footer {
-	/* 	position : fixed;
-	
+	position:absolute;
 	clear: both;
-	padding: 20px; 
+	padding: 20px; <!--
 	border: 1px solid #bcbcbc;
- */
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	margin-bottom: 20px;
-	height: 100px;
-}
+	-->
 
 #footer1 {
  	top:1200px;
@@ -302,3 +293,4 @@ border-top: 1px solid #adadad;
 
 
 } */
+
