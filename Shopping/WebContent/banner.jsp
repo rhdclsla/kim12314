@@ -1,79 +1,179 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script language="JavaScript">
-	$(document).ready(
-			function() {
-				//사용할 배너
-				var $banner = $(".banner").find("ul");
+<style>
+#slider {
+  width: 1250px;
+  height: 680px;
+  overflow: hidden;
+}
 
-				var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
-				var $bannerHeight = $banner.children().outerHeight(); // 높이
-				var $bannerLength = $banner.children().length;//배너 이미지의 갯수
-				var rollingId;
+.slide {
+  width: 1250px;
+  height: 680px;
+  float: left;
+  position: relative;
+}
 
-				//정해진 초마다 함수 실행
-				rollingId = setInterval(function() {
-					rollingStart();
-				}, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
+#slide-holder {
+  width: 600%;
+  position: relative;
+  left: 0;
+  -webkit-animation: scroller 10s infinite;
+          animation: scroller 60s infinite;
+}
 
-				//마우스 오버시 롤링을 멈춘다.
-				banner.mouseover(function() {
-					//중지
-					clearInterval(rollingId);
-					$(this).css("cursor", "pointer");
-				});
-				//마우스 아웃되면 다시 시작
-				banner.mouseout(function() {
-					rollingId = setInterval(function() {
-						rollingStart();
-					}, 3000);
-					$(this).css("cursor", "default");
-				});
+@-webkit-keyframes scroller {
+   0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  12% {
+    -webkit-transform: translateX(-1250px);
+            transform: translateX(-1250px);
+  }
+  24% {
+    -webkit-transform: translateX(-2500px);
+            transform: translateX(-2500px);
+  }
+  36% {
+    -webkit-transform: translateX(-3750px);
+            transform: translateX(-3750px);
+  }
+  48% {
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+  60% {
+    -webkit-transform: translateX(-6250px);
+            transform: translateX(-6250px);
+  }
+  72% {
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+  84% {
+    -webkit-transform: translateX(-3750px);
+            transform: translateX(-3750px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
 
-				function rollingStart() {
-					$banner.css("width", $bannerWidth * $bannerLength + "px");
-					$banner.css("height", $bannerHeight + "px");
-					//alert(bannerHeight);
-					//배너의 좌측 위치를 옮겨 준다.
-					$banner.animate({
-						left : -$bannerWidth + "px"
-					}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
-						//첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
-						$(this).append(
-								"<li>" + $(this).find("li:first").html()
-										+ "</li>");
-						//뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
-						$(this).find("li:first").remove();
-						//다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
-						$(this).css("left", 0);
-						//이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
-					});
-				}
-			});
-</script>
+@keyframes scroller {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  12% {
+    -webkit-transform: translateX(-1250px);
+            transform: translateX(-1250px);
+  }
+  24% {
+    -webkit-transform: translateX(-2500px);
+            transform: translateX(-2500px);
+  }
+  36% {
+    -webkit-transform: translateX(-3750px);
+            transform: translateX(-3750px);
+  }
+  48% {
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+  60% {
+    -webkit-transform: translateX(-6250px);
+            transform: translateX(-6250px);
+  }
+  72% {
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+  84% {
+    -webkit-transform: translateX(-3750px);
+            transform: translateX(-3750px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+body {
+  font-family: sans-serif;
+}
 
+#slider {
+  margin: 0 auto;
+}
+
+ .slide:nth-child(1) {
+  background: #c69;
+}
+
+.slide:nth-child(2) {
+  background: wheat;
+}
+
+.slide:nth-child(3) {
+  background: #eee;
+}
+.slide:nth-child(4) {
+  background: #eee;
+}
+.slide:nth-child(5) {
+  background: #eee;
+}
+.slide:nth-child(6) {
+  background: #eee;
+}
+.slide:nth-child(7) {
+  background: #eee;
+}
+
+</style>
 <meta charset="UTF-8">
 <title>Banner</title>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!-- 배너사진 -->
-		<div class="banner">
-			<ul>
-				<li><img src="image/hori.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori4.jpg" width="900" height="555px"></li>
-				<li><img src="image/hori2.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori5.jpg" width="750" height="555px"></li>
-				<li><img src="image/hori3.jpg" width="500" height="555px"></li>
-				<li><img src="image/hori6.jpg" width="900" height="555px"></li>
+	<!-- 배너사진 -->
+	<div class="banner">
+		<div id="slider">
+			<div id="slide-holder">
 			
-		</ul>
+				<div class="slide">
+					<img src="image/M1.jpg" width="1250px" height="680px"/>
+				</div>
+				
+				<div class="slide">
+					<img src="image/M2.jpg" width="1250px" height="680px"/>
+				</div>
+				
+				<div class="slide">
+					<img src="image/M3.jpg" width="1250px" height="680px"/>
+				</div>
+				
+				<div class="slide">
+					<img src="image/M4.jpg" width="1250px" height="680px"/>
+				</div> 
+				
+				<div class="slide" >
+					<img src="image/M5.jpg" width="1250px" height="680px"/>
+					</div>
+					
+				<div class="slide" >
+					<img src="image/M7.png" width="1250px" height="680px"/>
+				</div>
+				
+			</div>
+		</div>
 		</div>
 </body>
 </html>
