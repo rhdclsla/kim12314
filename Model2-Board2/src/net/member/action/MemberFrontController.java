@@ -83,10 +83,12 @@ implements javax.servlet.Servlet {
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());
+			return;
 		}else{
 			RequestDispatcher dispatcher=
 					request.getRequestDispatcher(forward.getPath());
 			dispatcher.forward(request, response);
+			return;
 		}
 	 }
 	 

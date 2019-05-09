@@ -3,9 +3,8 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="euc-kr">
 <title>NogiCoffee</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,8 +20,10 @@
 		
 		<div><jsp:include page="header.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="banner.jsp" flush="false"></jsp:include></div>
+		<div><jsp:include page="board_1.jsp" flush="false"></jsp:include></div>
+
 		<div><jsp:include page="best.jsp" flush="false"></jsp:include></div>
-	
+	 
 		<div><jsp:include page="bottom1.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="bottom.jsp" flush="false"></jsp:include></div>
 			
