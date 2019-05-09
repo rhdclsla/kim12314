@@ -143,7 +143,6 @@ body {
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<<<<<<< HEAD
 	<!-- 배너사진 -->
 	<div class="banner">
 		<div id="slider">

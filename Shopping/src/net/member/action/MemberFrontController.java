@@ -85,7 +85,7 @@ implements javax.servlet.Servlet {
 		}else if(command.equals("/product/AdminPage.mo")) {
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("/Admin_page.jsp");
+			forward.setPath("./Admin_page.jsp");
 		}else if(command.equals("/MemberLogoutAction.mo")) {
 			action = new MemberLogoutAction();
 			try {

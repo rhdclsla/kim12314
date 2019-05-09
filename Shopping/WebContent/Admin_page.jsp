@@ -19,6 +19,7 @@ table {
 </style>
 </head>
 <body>
+
 	<div id="container">
 		<div><jsp:include page="/header.jsp"></jsp:include></div>
 		<div align="center">

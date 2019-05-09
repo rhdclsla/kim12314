@@ -82,20 +82,58 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 	         }catch(Exception e) {
 	            e.printStackTrace();
 	         }
-	      }else if(command.equals("/product/Productsale.po")) {
-				forward=new ActionForward();
-				forward.setRedirect(false);
-				forward.setPath("./Product_sale.jsp");
-			}
 
-		
+
+	    }else if(command.equals("/ProductDetailAction.po")) {
+		     action = new ProductDetailAction();
+		     try {
+		        forward = action.execute(request, response);
+		     }catch(Exception e) {
+		        e.printStackTrace();
+		     }
+	    }else if(command.equals("/ProductDetail.po")) {
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./product/Product_detail.jsp");
+		}else if(command.equals("/ProductUpdateView.po")) {
+			 action = new ProductUpdateView();
+			 try {
+			    forward = action.execute(request, response);
+			  }catch(Exception e) {
+			      e.printStackTrace();
+			  }
+		}else if(command.equals("/ProductUpdateAction.po")) {
+			 action = new ProductUpdateAction();
+			 try {
+			    forward = action.execute(request, response);
+			  }catch(Exception e) {
+			      e.printStackTrace();
+			  }
+		}else if(command.equals("/ProductDeleteAction.po")) {
+			action = new ProductDeleteAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/product/ProductDetailAction.po")) {
+			action = new ProductDetailAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
 		if(forward.isRedirect()){
 			System.out.println("for " + forward.getPath());
 			response.sendRedirect(forward.getPath());
+			return;
 		}else{
 			RequestDispatcher dispatcher=
 					request.getRequestDispatcher(forward.getPath());
 			dispatcher.forward(request, response);
+			return;
 		}
 
 	}

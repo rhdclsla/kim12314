@@ -14,29 +14,23 @@ import net.product.db.ProductDAO;
 public class ProductDetailAction implements Action{
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		HttpSession session = request.getSession();
-		ProductDAO productdao = new ProductDAO();
-		ProductBean productbean = new ProductBean();
-		System.out.println("해");
-		productbean.setProduct_code(Integer.parseInt(request.getParameter("code")));
+		ProductDAO productdao = new ProductDAO();		
+		int code = Integer.parseInt(request.getParameter("code"));
 		
-		if(request.getParameter("code") != null) {
-			if(!productdao.deleteProduct(productbean.getProduct_code())) {
-				PrintWriter out = response.getWriter();
-				out.println("<script>");
-				out.println("alert('Deletion is failed try again')");
-				out.print("</script>");
-				out.close();
-				return null;
-			}
-		}else{
+		if(productdao.detailProduct(code) == null) {
+			PrintWriter out = response.getWriter();
+			out.println("<script>");
+			out.println("alert('Register is failed try again')");
+			out.print("</script>");
+			out.close();
 			return null;
 		}
-	
 
+		session.setAttribute("detailProduct", productdao.detailProduct(code));
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(false);
-		
-		forward.setPath("./Productsale.po");
+		forward.setRedirect(true);
+		forward.setPath("ProductDetail.po");
+
 		productdao.conClose();
 		return forward;
 		
