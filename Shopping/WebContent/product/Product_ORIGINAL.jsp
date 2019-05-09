@@ -49,7 +49,7 @@
 </style>
 </head>
 <body>
-
+<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
   <br><br><br><br><br><br><br><br><br><br><br>
    <table border=1 >
       <tr><td class="b" colspan=2 >Product List</td></tr>
@@ -62,9 +62,9 @@
    		<tr>
       	<td class = "aa" style = "color:black;">
          
-            <%=bean.getProduct_image() %><br>
+          <a href =""?code=<%=bean.getProduct_code() %>><img src="<%=bean.getProduct_image() %>"></a>  <br>
     	     제품명: <%=bean.getProduct_name() %><br>
-        	 가격: <%=bean.getProduct_cost() %>
+        	 가격: <%=bean.getProduct_price() %>
    
      	 </td>
          </tr>

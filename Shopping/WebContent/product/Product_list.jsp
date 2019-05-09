@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
 <%
 	List<ProductBean> beans = (List<ProductBean>)session.getAttribute("productbean");
 %>
@@ -24,7 +24,7 @@
 	</tr>
 	<%for(ProductBean bean : beans){ %>
 	<tr>
-		<td><a href="ProductDetailAction.mo?code=<%=bean.getProduct_code() %>">
+		<td><a href="ProductDetailAction.po?code=<%=bean.getProduct_code() %>">
          	<%=bean.getProduct_code() %>
          	</a></td>
 		<td><%=bean.getProduct_name() %></td>

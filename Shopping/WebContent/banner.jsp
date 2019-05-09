@@ -71,7 +71,9 @@
 				<li><img src="image/hori2.jpg" width="500" height="600px"></li>
 				<li><img src="image/hori5.jpg" width="750" height="600px"></li>
 				<li><img src="image/hori3.jpg" width="500" height="600px"></li>
-				<li><img src="image/hori6.jpg" width="900" height="600px"></li>		
+				<li><img src="image/hori6.jpg" width="900" height="600px"></li>
+				<li><img src="image/hori7.jpg" width="900" height="600px"></li>
+				<li><img src="image/hori8.jpg" width="480" height="600px"></li>		
 				</ul>
 		</div>
 </body>

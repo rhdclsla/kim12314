@@ -26,10 +26,11 @@ public class ProductDetailAction implements Action{
 			out.close();
 			return null;
 		}
+
 		session.setAttribute("detailProduct", productdao.detailProduct(code));
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("");
+		forward.setPath("ProductDetail.po");
 		productdao.conClose();
 		return forward;
 		
