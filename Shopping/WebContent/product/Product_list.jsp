@@ -1,7 +1,10 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@page import="net.product.db.ProductBean"%>
-<%@page import="java.util.List" %>
+<%@page import="net.product.db.ProductDAO"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,8 +31,10 @@ table.style_Table td {
 <body>
 
 
+
 <div id="container">
 		<div><jsp:include page="/header.jsp"></jsp:include></div>
+
 
 <%
 	List<ProductBean> beans = (List<ProductBean>)session.getAttribute("productbean");
