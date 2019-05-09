@@ -28,6 +28,11 @@
   					document.getElementById("demo").innerHTML ="합계:"+(x*y);
   				 	
 					}
+					function Point(){
+						var point= parseInt(document.getElementById("Order_count").value);  
+	  					var y ="<%=cost%>"; 
+	  					document.getElementById("point").innerHTML ="포인트:"+(x*y)/100;
+					}
 	</script>
 
 </head>
@@ -67,6 +72,7 @@
 
 <center>
 	<div class="aa" style="color: black;">각임?</div>
+ 	
  	<table border=1 >
  	<tr> 
    		<td colspan="4"><%=bean.getProduct_name() %></td>
@@ -94,6 +100,9 @@
       		</td> 
       		<td id="demo">	
       		</td>
+      		</td> 
+      		<td id="point">	
+      		</td>
       		<td>
       		<a href="장바구니 ㄱㄱ"><button>장바구니에 담기</button></a>
       		<a href="OrderOrderAction.po"><button>구입 하기</button></a>
@@ -101,7 +110,7 @@
       		
     	  
     	</tr>
-	</talbe>
+	</table>
 	
 
    <%}%>

@@ -14,8 +14,7 @@ import net.product.db.ProductDAO;
 public class ProductDetailAction implements Action{
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		HttpSession session = request.getSession();
-		ProductDAO productdao = new ProductDAO();
-		
+		ProductDAO productdao = new ProductDAO();		
 		int code = Integer.parseInt(request.getParameter("code"));
 		
 		if(productdao.detailProduct(code) == null) {
@@ -31,6 +30,7 @@ public class ProductDetailAction implements Action{
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
 		forward.setPath("ProductDetail.po");
+
 		productdao.conClose();
 		return forward;
 		
