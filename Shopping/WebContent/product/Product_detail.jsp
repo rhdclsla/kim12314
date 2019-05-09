@@ -19,6 +19,7 @@
 <table border="1">
 	<tr>
 		<td>상품코드</td><td colspan="5"><input type="text" name="code" id="code" value =<%=((ProductBean)session.getAttribute("detailProduct")).getProduct_code()%> readonly/></td>
+
 	</tr>
 	<tr>
 		<td>상품분류</td><td colspan="5"><%=((ProductBean)session.getAttribute("detailProduct")).getProduct_category()%></td>

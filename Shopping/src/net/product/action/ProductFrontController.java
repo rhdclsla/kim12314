@@ -1,5 +1,4 @@
 package net.product.action;
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -83,6 +82,7 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 	         }catch(Exception e) {
 	            e.printStackTrace();
 	         }
+
 	    }else if(command.equals("/ProductDetailAction.po")) {
 		     action = new ProductDetailAction();
 		     try {

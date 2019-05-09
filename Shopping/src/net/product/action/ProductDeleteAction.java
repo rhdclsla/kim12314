@@ -28,9 +28,10 @@ public class ProductDeleteAction implements Action{
 				out.close();
 				return null;
 		}
-		
+
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
+
 		forward.setPath("ProductListAction.po");
 		productdao.conClose();
 		return forward;

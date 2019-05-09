@@ -16,9 +16,7 @@ public class ProductInfoAction implements Action{
    public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
       HttpSession session = request.getSession();
       ProductDAO productdao = new ProductDAO();
-      System.out.println("1");
       String category=request.getParameter("category");
-      System.out.println(category);
       if(productdao.researchProduct(category) == null) {
          PrintWriter out = response.getWriter();
          out.println("<script>");
