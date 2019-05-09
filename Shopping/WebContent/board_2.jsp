@@ -9,9 +9,10 @@
 
 </head>
 <body>
+	<div id="container">
 		<div class="board2">
 			<img src="image/abt1.png" width="1200"/>
 		</div>
-	
+	</div>
 </body>
 </html>

@@ -136,9 +136,10 @@ margin-left: 60px;
 	width: 1700px;
 	float: left;
 	position: absolute;
+
 	left: 270px;
 	margin: 110px 75px; 
-/* 		border: 1px solid #bcbcbc;
+/* 	border: 1px solid #bcbcbc;
  */}
 
 .board1 {
@@ -151,7 +152,7 @@ margin-left: 60px;
 .board1_1 {
 	
 	position: absolute;
-	top: -290px;
+	top: -270px;
 	left: 30px;
 	width: 500;
 }
@@ -269,20 +270,13 @@ text-align: center;
 
 
 #footer {
-	/* 
-	position:absolute;
-	right:0;
-	clear: both;
-	padding: 20px; 
-	border: 1px solid #bcbcbc;
-	 */
 	position: fixed;	
 	right: 0;	
 	bottom: 0;	
 	margin-bottom: 20px;	
 	height: 100px;
-	
 }
+
 #footer1 {
  	top:1000px;
  	left: 100px;

@@ -16,13 +16,21 @@ public class ProductInfoAction implements Action{
    public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
       HttpSession session = request.getSession();
       ProductDAO productdao = new ProductDAO();
-      System.out.println("1");
       String category=request.getParameter("category");
-      System.out.println(category);
+      
+      if(session.getAttribute("id").equals(null)) {
+    	  PrintWriter out = response.getWriter();
+          out.println("<script>");
+          out.println("alert('Somethig is wrong')");
+          out.println("location.href = 'MemberLoginForm.mo'");
+          out.print("</script>");
+          out.close();
+          return null;
+      }
       if(productdao.researchProduct(category) == null) {
          PrintWriter out = response.getWriter();
          out.println("<script>");
-         out.println("alert('뭔가 잘못됨')");
+         out.println("alert('Somethig is wrong')");
          out.print("</script>");
          out.close();
          return null;

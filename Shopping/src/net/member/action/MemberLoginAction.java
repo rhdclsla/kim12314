@@ -27,7 +27,7 @@ public class MemberLoginAction implements Action {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('아이디 또는 비밀번호가 잘못되었습니다.')");
-			out.println("location.href='./MemberLoginForm.mo';");
+			out.println("location.href='./MemberLoginForm.mo'");
 			out.println("</script>");
 			out.close();
 			return null;
