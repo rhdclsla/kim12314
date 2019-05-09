@@ -36,10 +36,12 @@
 
 
 	
+
 	<div class="menubar">
 
+
       <ul>
-         <li><a href="#">ABOUT MAXIM</a></li>
+		 <li><a href="aboutmaxim.jsp">ABOUT MAXIM</a></li>
          <li><a href="#" id="current">PRODUCT</a>
             <ul>
                <li><a href="ProductInfoAction.po?category=ORIGINAL">ORIGINAL</a></li>
@@ -54,7 +56,6 @@
          <li><a href="#">CUSTOMER</a></li>
       </ul>
    </div>
-
 </body>
 </html>
 

@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img src="C:\Users\user\Desktop\batang.png" />
 
-	
+	<div id="container">
+		<div id="footer1">
+			<p>
+				<a href="NewFile.jsp" > 눌러바 ㅋ</a>
+			</p>
+		</div>
+		</div>
+
 </body>
 </html>
