@@ -28,8 +28,8 @@ public class ProductListAction implements Action{
 		
 		session.setAttribute("productbean", productdao.getListProduct());
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("./ProductList.po");
+		forward.setRedirect(false);
+		forward.setPath("./product/Product_list.jsp");
 		productdao.conClose();
 		return forward;
 		

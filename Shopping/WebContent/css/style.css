@@ -137,7 +137,6 @@ position: relative;
 	float: left;
 	position: absolute;
 	left: 230px;
-	border: 1px solid #bcbcbc;
 }
 
 .board1 {
@@ -150,7 +149,7 @@ position: relative;
 .board1_1 {
 	
 	position: absolute;
-	top: -290px;
+	top: -270px;
 	left: 30px;
 	width: 500;
 }
@@ -197,7 +196,7 @@ position: relative;
 	width: 1270px;
 	height: 680px;
 	top: 60px;
-	left:520px;
+	left:450px;
 	overflow: hidden;
 
 }
@@ -207,7 +206,7 @@ position: relative;
 	width: 1270px;
 	height: 680px;
 	top: 60px;
-	left: 520px;
+	left: 500px;
 	overflow: hidden;
 
 
@@ -265,20 +264,13 @@ position: relative;
 
 
 #footer {
-	/* 
-	position:absolute;
-	right:0;
-	clear: both;
-	padding: 20px; 
-	border: 1px solid #bcbcbc;
-	 */
 	position: fixed;	
 	right: 0;	
 	bottom: 0;	
 	margin-bottom: 20px;	
 	height: 100px;
-	
 }
+
 #footer1 {
  	top:1200px;
  	left: 100px;
