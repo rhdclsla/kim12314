@@ -143,7 +143,6 @@ body {
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<<<<<<< HEAD
 	<!-- 배너사진 -->
 	<div class="banner">
 		<div id="slider">
@@ -154,7 +153,7 @@ body {
 				</div>
 				
 				<div class="slide">
-					<img src="image/hori4.jpg" width="1250px" height="680px"/>
+					<img src="image/M2.jpg" width="1250px" height="680px"/>
 				</div>
 				
 				<div class="slide">
@@ -162,7 +161,7 @@ body {
 				</div>
 				
 				<div class="slide">
-					<img src="image/hori6.jpg" width="1250px" height="680px"/>
+					<img src="image/M4.jpg" width="1250px" height="680px"/>
 				</div> 
 				
 				<div class="slide" >
@@ -170,7 +169,7 @@ body {
 					</div>
 					
 				<div class="slide" >
-					<img src="image/hori5.jpg" width="1250px" height="680px"/>
+					<img src="image/M6.jpg" width="1250px" height="680px"/>
 				</div>
 				
 			</div>
