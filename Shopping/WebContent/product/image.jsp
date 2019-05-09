@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html lang="en">
@@ -24,16 +24,10 @@
         <br />
         <input type="file" name="image" id="image" />
     </p>
-    
     <input type="submit" value="전송">
     </form>
     <div id="image_preview">
-  	<script type="text/javascript" src="<c:url value='/js/jquery.1.9.1.min.js'/>"></script>
-  	<img src="#"  width="500" height="500" id="image" name="image" />
-       
-
-
-    
+        <img src="#"  width="600" height="600"/>
         <br />
         <a href="#">Remove</a>
     </div>
