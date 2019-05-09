@@ -184,10 +184,45 @@ public class ProductDAO {
 		return null;
 	}
 	
-	//상품 검색 상품이름용 
-	public String researchProduct(String id) {
-		return "x";
-	}
+	//상품 검색 상품카테고리용 
+	   public List researchProduct(String category) throws SQLException{
+	      String sql="select * from product where product_category=?";
+	      List list = new ArrayList();
+	      
+	      try {
+	         pt = conn.prepareStatement(sql);
+	         pt.setString(1, category);
+	         re = pt.executeQuery();
+	         while(re.next()) {
+	            ProductBean productbean = new ProductBean();
+	            
+	            String date = String.valueOf(re.getTimestamp("product_date"));
+	            
+	            productbean.setProduct_code(re.getInt("product_code"));
+	            productbean.setProduct_category(re.getString("product_category"));
+	            productbean.setProduct_name(re.getString("product_name"));
+	            productbean.setProduct_count(re.getInt("product_count"));
+	            productbean.setProduct_image(re.getString("product_image"));
+	            productbean.setProduct_cost(re.getInt("product_cost"));
+	            productbean.setProduct_price(re.getInt("product_price"));
+	            productbean.setProduct_detail(re.getString("product_detail"));
+	            productbean.setProduct_date(date);
+	            list.add(productbean);
+	         }
+	         System.out.println("잘되냐??");
+	         return list;
+	      }catch(RuntimeException er) {
+	         er.printStackTrace();
+	      }finally {
+	         try {
+	            if(pt!=null) {pt.close(); pt = null; }
+	         }catch(Exception e) {
+	            e.printStackTrace();
+	         }
+	      }
+	      return null;
+	   }
+
 	
 	//상품 검색 코드용 
 	public String researchProduct(int code) {
