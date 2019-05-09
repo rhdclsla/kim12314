@@ -51,9 +51,8 @@
 <body>
 
   <br><br><br><br><br><br><br><br><br><br><br>
- <center>
    <table border=1 >
-      <tr><td class="b" colspan=3>Product List</td></tr>
+      <tr><td class="b" colspan=2 >Product List</td></tr>
  
 
   <%if(session.getAttribute("infoproduct") == null){ %>
@@ -61,16 +60,17 @@
   <% }else{%>
   	<%for(ProductBean bean : beans){ %>
    		<tr>
-   			
-      		<td class = "aa" style = "color:black;">
-         	<a href="ProductDetailAction.po?code=<%=bean.getProduct_code() %>"><img src="<%=bean.getProduct_image()%>"></a>
-         	</td>
-    	    <td>제품명: <%=bean.getProduct_name() %></td>
-        	<td>가격: <%=bean.getProduct_cost() %></td>       	
+      	<td class = "aa" style = "color:black;">
+         
+            <%=bean.getProduct_image() %><br>
+    	     제품명: <%=bean.getProduct_name() %><br>
+        	 가격: <%=bean.getProduct_cost() %>
+   
+     	 </td>
          </tr>
    	<%}%>
    <%}%>
 </table>
-</center>
+
 </body>
 </html>

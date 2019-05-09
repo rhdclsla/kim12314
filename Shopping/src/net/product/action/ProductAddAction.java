@@ -41,7 +41,6 @@ public class ProductAddAction implements Action{
 //		out.println("location.href='./ProductList.po'");
 //		out.print("</script>");
 //		out.close();
-		System.out.println("z");
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
 		forward.setPath("ProductListAction.po");

@@ -1,4 +1,4 @@
-﻿package net.product.db;
+package net.product.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -110,10 +110,8 @@ public class ProductDAO {
 	}
 	
 	//상품상세정보용
-
 	public ProductBean detailProduct(int code) throws SQLException{
 		String sql = "select * from product where product_code = ?";
-
 		
 		try {
 			pt = conn.prepareStatement(sql);
@@ -139,8 +137,8 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(re!=null) { re.close(); re=null;}
-				if(pt!=null) { pt.close(); pt=null;}
+				if(re!=null) {conClose(); re.close();}
+				if(pt!=null) {conClose(); pt.close();}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
