@@ -14,13 +14,13 @@
 		<div class="board1">
 			<p>
 				<a href="NewFile.jsp"><img
-					src="image/btn01.png" height= "320px"width= "460px" /></a>
+					src="image/btn01.png" height= "330px"width= "460px" /></a>
 			</p>
 		</div>
 		<div class="board1_1">
 			<p>
 				<a href="https://www.youtube.com/watch?v=nOitN0b_5do"><img
-					src="image/btn03.jpg" height= "340px" width= "460px" /></a>
+					src="image/btn03.jpg" height= "320px" width= "460px" /></a>
 			</p>
 		</div>
 		<div class="board1_2">
