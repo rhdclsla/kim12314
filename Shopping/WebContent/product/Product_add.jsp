@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -6,7 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>상품등록</title>
+
 
 
 </head>
@@ -19,6 +21,7 @@
 <form method="post" action="ProductAddAction.po" name = "productaddform">
 <table border="1">
 
+
    <tr>
       <td>상품분류</td><td colspan="5"><input type="text" name="category" id="category"></td>
    </tr>
@@ -26,7 +29,8 @@
       <td>상품이름</td><td colspan="5"><input type="text" name="name" id="name"></td>
    </tr>
    <tr>
-      <td>원가</td><td><input type="text" name="cost" id="cost"></td><td>판매가</td><td><input type="text" id="price" name="price"></td>
+      <td>원가</td><td><input type="text" name="cost" id="cost"></td>
+      <td>판매가</td><td><input type="text" id="price" name="price"></td>
    </tr>
    <tr>
       <td colspan="6">상품상세 설명</td>
@@ -35,8 +39,11 @@
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
-      <td colspan="5"><a href="./product/image.jsp">이미지</a></td>
-      <td><input type="text" name = "image" id = "image" value="<%=request.getParameter("image")%>" readonly/></td>
+      <td colspan="5"><a href="image.jsp">이미지</a>
+      <%String image=request.getParameter("image"); 
+      	
+      %>
+      <input type="text" name = "image" id = "image" value="<%=image %>" readonly/></td>
       
       
       
@@ -51,6 +58,7 @@
    <tr align="left">
       <td><input type="submit" value="완료" ><input type="button" value="목록" onclick="List.jsp"></td>
    </tr>
+
 </table>
 </form>
 

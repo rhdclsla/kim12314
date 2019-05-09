@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -17,7 +17,9 @@
 <form method="post" action="ProductAddAction.po">
 <table border="1">
 	<tr>
-		<td>상품코드</td><td colspan="5"><input type="text" name="code" id="code" value =<%-- <%=((ProductBean)session.getAttribute("detailProduct")).getProduct_code() --%>%> ></td>
+
+		<td>상품코드</td><td colspan="5"><input type="text" name="code" id="code" value =<%=((ProductBean)session.getAttribute("detailProduct")).getp%> ></td>
+
 	</tr>
 	<tr>
 		<td>상품분류</td><td colspan="5"><input type="text" name="category" id="category"></td>

@@ -7,10 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<div id="container">
 		<div id="footer1">
 			<p>
-				<a href="gogogo.jsp" > 눌러바 ㅋ</a>
+				<a href="NewFile.jsp" > 눌러바 ㅋ</a>
 			</p>
 		</div>
+		</div>
+
 </body>
 </html>

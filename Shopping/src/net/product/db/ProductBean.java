@@ -11,6 +11,7 @@ public class ProductBean {
 	private String product_detail; //상품설명
 	private String product_date; //등록일
 	
+	
 	public int getProduct_code() {
 		return product_code;
 	}
