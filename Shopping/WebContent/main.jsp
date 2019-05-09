@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
 <meta charset="euc-kr">
-<title>NogiCoffee</title>
+<title>MaximCoffee</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -17,14 +17,14 @@
 	<div id="container">
 		<div><jsp:include page="header.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="banner.jsp" flush="false"></jsp:include></div>
-		<div><jsp:include page="best.jsp" flush="false"></jsp:include></div>
-	<%-- 	<div><jsp:include page="board_2.jsp" flush="false"></jsp:include></div>
+		<div><jsp:include page="board_1.jsp" flush="false"></jsp:include></div>
 	
-	 --%>	
+		<div><jsp:include page="best.jsp" flush="false"></jsp:include></div>
+	 	
+	 
 	 <div><jsp:include page="bottom1.jsp" flush="false"></jsp:include></div>
 	 <div><jsp:include page="bottom.jsp" flush="false"></jsp:include></div>
 			
 
 	</div>
 </body>
-</html>

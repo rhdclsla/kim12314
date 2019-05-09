@@ -1,3 +1,4 @@
+
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="net.product.db.ProductBean"%>
@@ -64,4 +65,5 @@ table.style_Table td {
 </div>
 </div>
 </body>
+
 </html>

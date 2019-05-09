@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 			<a href="AdminPage.mo">ADMINPAGE</a>
 		<%}%>	
 			<a href="MemberLogoutAction.mo">LOGOUT</a>
-			<a href="basket.jsp">BASKET</a> 
+			<a href="www.daum.net">BASKET</a> 
 			<a href="ProductOrderAction.po">ORDER</a>
 	<%}else{ %>	
 			<a href="MemberLoginForm.mo">LOGIN</a>
@@ -36,9 +37,12 @@
 
 
 	
+
 	<div class="menubar">
+
+
       <ul>
-         <li><a href="#">ABOUT MAXIM</a></li>
+		 <li><a href="aboutmaxim.jsp">ABOUT MAXIM</a></li>
          <li><a href="#" id="current">PRODUCT</a>
             <ul>
                <li><a href="ProductInfoAction.po?category=ORIGINAL">ORIGINAL</a></li>
@@ -48,11 +52,10 @@
                <li><a href="#">TASSIMO</a></li>
             </ul>
          </li>
-         <li><a href="event.jsp">EVENT</a></li>
-         <li><a href="news&media.jsp">NEWS&MEDIA</a></li>
+         <li><a href="#">EVENT</a></li>
+         <li><a href="#">NEWS&MEDIA</a></li>
          <li><a href="#">CUSTOMER</a></li>
       </ul>
    </div>
-
 </body>
 </html>
