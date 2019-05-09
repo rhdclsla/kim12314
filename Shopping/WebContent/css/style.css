@@ -251,29 +251,17 @@ position: relative;
 	top: 100px;
 	left: 1055px;
 	margin-bottom: 20;
-}
 
-.line5 {
-	position: absolute;
-	top: 100px;
-	left: 1315px;
-	margin-bottom: 20;
-}
-
-.line6 {
-	position: absolute;
-	top: 100px;
-	left: 1525px;
-	margin-bottom: 20;
 }
 
 
 #footer {
-	position:absolute;
-	clear: both;
-	padding: 20px; <!--
-	border: 1px solid #bcbcbc;
-	-->
+	position: fixed;	
+	right: 0;	
+	bottom: 0;	
+	margin-bottom: 20px;	
+	height: 100px;
+}
 
 #footer1 {
  	top:1200px;

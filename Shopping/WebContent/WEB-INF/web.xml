@@ -61,5 +61,17 @@
   <servlet-mapping>
     <servlet-name>ReviewFrontController</servlet-name>
     <url-pattern>*.re</url-pattern>
+
+  
+  <servlet>
+    <servlet-name>OrderFrontController</servlet-name>
+    <servlet-class>
+			net.Order.action.OrderFrontController
+	</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderFrontController</servlet-name>
+    <url-pattern>*.oo</url-pattern>
+
   </servlet-mapping>
 </web-app>

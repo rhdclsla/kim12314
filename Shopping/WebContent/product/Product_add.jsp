@@ -13,12 +13,13 @@
 
 </head>
 <body>
-
+<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
 <h2>상품등록</h2>
 <jsp:useBean id="now" class="java.util.Date" />
 <fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss" var="date"/>
 
 <form method="post" action="ProductAddAction.po" name = "productaddform">
+<input type="hidden" name = "image" id = "image" value="<%=request.getParameter("image")%>" readonly/>
 <table border="1">
 
 
@@ -39,15 +40,11 @@
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
-      <td colspan="5"><a href="image.jsp">이미지</a>
-      <%String image=request.getParameter("image"); 
-      	
-      %>
-      <input type="text" name = "image" id = "image" value="<%=image %>" readonly/></td>
-      
-      
-      
-         
+      <td colspan="5"><a href="./product/image.jsp">이미지</a></td>
+   </tr>
+   <tr>
+      <td><img src="<%=request.getParameter("image")%>"></td>
+
    </tr>
    <tr>
       <td>수량</td><td colspan="3"><input type="text" id="count" name="count"></td><td>상품등록일</td>
@@ -56,12 +53,12 @@
       </td>
    </tr>
    <tr align="left">
-      <td><input type="submit" value="완료" ><input type="button" value="목록" onclick="List.jsp"></td>
+      <td><input type="submit" value="완료" ></td>
    </tr>
 
 </table>
 </form>
-
+<a href ="ProductList.po"><button>목록</button></a>
 
 </body>
 </html>

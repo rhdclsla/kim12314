@@ -59,7 +59,7 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt =null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -101,7 +101,7 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt = null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -113,32 +113,32 @@ public class ProductDAO {
 
 	public ProductBean detailProduct(int code) throws SQLException{
 		String sql = "select * from product where product_code = ?";
-
-		
 		try {
 			pt = conn.prepareStatement(sql);
 			pt.setInt(1, code);
 			re = pt.executeQuery();
 			ProductBean productbean = new ProductBean();
 			
-			while(re.next()) {
-				productbean.setProduct_code(re.getInt("product_code"));
-				productbean.setProduct_category(re.getString("product_category"));
-				productbean.setProduct_name(re.getString("product_name"));
-				productbean.setProduct_count(re.getInt("product_count"));
-				productbean.setProduct_image(re.getString("product_image"));
-				productbean.setProduct_cost(re.getInt("product_cost"));
-				productbean.setProduct_price(re.getInt("product_price"));
-				productbean.setProduct_detail(re.getString("product_detail"));
-				String date = String.valueOf(re.getTimestamp("product_date"));
-				productbean.setProduct_date(date);
-			}
+			if(!re.next()) {return null;}
+			
+			productbean.setProduct_code(re.getInt("product_code"));
+			productbean.setProduct_category(re.getString("product_category"));
+			productbean.setProduct_name(re.getString("product_name"));
+			productbean.setProduct_count(re.getInt("product_count"));
+			productbean.setProduct_image(re.getString("product_image"));
+			productbean.setProduct_cost(re.getInt("product_cost"));
+			productbean.setProduct_price(re.getInt("product_price"));
+			productbean.setProduct_detail(re.getString("product_detail"));
+			String date = String.valueOf(re.getTimestamp("product_date"));
+			productbean.setProduct_date(date);
+			
 			
 			return productbean;
 		}catch(RuntimeException er) {
 			er.printStackTrace();
 		}finally {
 			try {
+
 				if(re!=null) { re.close(); re=null;}
 				if(pt!=null) { pt.close(); pt=null;}
 			}catch(Exception e) {
@@ -217,6 +217,7 @@ public class ProductDAO {
 	         er.printStackTrace();
 	      }finally {
 	         try {
+	        	if(re!=null) {re.close(); re = null; }
 	            if(pt!=null) {pt.close(); pt = null; }
 	         }catch(Exception e) {
 	            e.printStackTrace();
@@ -245,7 +246,7 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt = null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
