@@ -29,7 +29,8 @@
       <td>상품이름</td><td colspan="5"><input type="text" name="name" id="name"></td>
    </tr>
    <tr>
-      <td>원가</td><td><input type="text" name="cost" id="cost"></td><td>판매가</td><td><input type="text" id="price" name="price"></td>
+      <td>원가</td><td><input type="text" name="cost" id="cost"></td>
+      <td>판매가</td><td><input type="text" id="price" name="price"></td>
    </tr>
    <tr>
       <td colspan="6">상품상세 설명</td>

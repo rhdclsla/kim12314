@@ -50,13 +50,7 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./product/Product_order.jsp");
-		}else if(command.equals("/ProductOrderAction.po")) {
-			action = new ProductOrderAction();
-			try {
-				forward = action.execute(request, response);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
+		
 		}else if(command.equals("/ProductListAction.po")) {
 			action = new ProductListAction();
 			try {
@@ -87,6 +81,15 @@ public class ProductFrontController extends HttpServlet implements javax.servlet
 	         }catch(Exception e) {
 	            e.printStackTrace();
 	         }
+		}else if(command.equals("/ProductDetailAction.po")) {
+		         action = new ProductDetailAction();
+		         
+		         try {
+		        	
+		        	 forward = action.execute(request, response);
+		         }catch(Exception e) {
+		            e.printStackTrace();
+		         }
 	      }
 
 		

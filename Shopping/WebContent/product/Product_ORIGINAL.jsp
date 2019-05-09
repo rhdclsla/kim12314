@@ -61,12 +61,12 @@
   <% }else{%>
   	<%for(ProductBean bean : beans){ %>
    		<tr>
+   			
       		<td class = "aa" style = "color:black;">
-         	<a href="ProductInfoAction.po?code=<%=bean.getProduct_code() %>"><img src="<%=bean.getProduct_image()%>"></a></td>
+         	<a href="ProductDetailAction.po?code=<%=bean.getProduct_code() %>"><img src="<%=bean.getProduct_image()%>"></a>
+         	</td>
     	    <td>제품명: <%=bean.getProduct_name() %></td>
-        	<td>가격: <%=bean.getProduct_cost() %></td>
-        	
-       	
+        	<td>가격: <%=bean.getProduct_cost() %></td>       	
          </tr>
    	<%}%>
    <%}%>

@@ -17,21 +17,26 @@ public class ProductDetailAction implements Action{
 		ProductDAO productdao = new ProductDAO();
 		
 		int code = Integer.parseInt(request.getParameter("code"));
+		 System.out.println("확인3");
 		
 		if(productdao.detailProduct(code) == null) {
+			
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('Register is failed try again')");
 			out.print("</script>");
 			out.close();
 			return null;
+			
 		}
+		System.out.println("셈");
 		session.setAttribute("detailProduct", productdao.detailProduct(code));
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("");
+		forward.setRedirect(false);
+		forward.setPath("product/Product_sale.jsp");
 		productdao.conClose();
+		System.out.println("끝?");
 		return forward;
-		
+	
 	}
 }

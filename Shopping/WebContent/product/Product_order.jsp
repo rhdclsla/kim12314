@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-
+	pageEncoding="UTF-8"%>
+<%@page import="net.Order.db.*"%>
+<%@page import="java.util.List"%>
+<%
+	List<OrderBean> beans = (List<OrderBean>)session.getAttribute("orderbean");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,35 +143,55 @@ html ul.tabs li.active, html ul.tabs li.active a:hover {
                <input type="date" name="Lastday" id="Lastday">
                <input type="submit" value="조회">
             </form>
+            
+            
             <ul>
 
                <li>기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
                <li>주문번호를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.</li>
             </ul>
-            <b>취소/교환/반품</b>
-            <hr>
-
-            <table border="1">
+          
+           <table border="1">
                <tr>
                   <td>주문일자</td>
-                  <td>주문번호</td>
+                  <td>[주문번호]</td>
                   <td>이미지</td>
-                  <td>상품정보 수량</td>
-                  <td>상품정보</td>
-                  <td>수량</td>
+                  <td>구매 수량</td>
                   <td>상품구매금액</td>
                   <td>주문처리상태</td>
                   <td>취소/교환/반품</td>
                </tr>
                <tr>
-                  <td colspan="8">
-                  
-                  </td>
+                  <td colspan="9" align="center">나니모 나깟다</td>
+               </tr>
+
+            </table>
+            
+            
+            <b>취소/교환/반품</b>
+            <hr>
+
+            <table border="1">
+              	<%for(OrderBean bean : beans){ %>
+				<tr>
+					<td><%=bean.getOrder_date() %></td>
+					<td><a href="OrderDetailAction.oo?code=<%=bean.getOrder_code() %>">
+         				<%=bean.getOrder_code() %></a></td>
+					<td><%=bean.getOrder_image() %></td>
+					<td></td>
+					<td><%=bean.getOrder_price() %></td>
+					<td><%=bean.getOrder_result() %></td>			
+                  	
                   <td>
-                     <input type="button" value="취소" onclick="location.href='ProductDeleteAction.po' ">
-                     <input type="button" value="교환" onclick="location.href='교환하는곳' ">
-                     <input type="button" value="반품" onclick="location.href='반품하는곳'  ">
-                  </td>
+                  	<a href = "ProductDeleteAction.po?code=<%=bean.getOrder_code() %>">
+						<button>취소</button></a>
+					<a href = "ProductChangeAction.po?code=<%=bean.getOrder_code() %>">
+						<button>교환</button></a>
+					<a href = "ProductRecallAction.po?code=<%=bean.getOrder_code() %>">
+						<button>반품</button></a>
+				  </td>
+                     
+                  <%} %>
                </tr>
             </table>
          </div>

@@ -61,8 +61,6 @@ public class ProductBean {
 		this.product_detail = product_detail;
 	}
 	public String getProduct_date() {
-		
-		
 		return product_date;
 	}
 	public void setProduct_date(String product_date) {

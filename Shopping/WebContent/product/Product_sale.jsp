@@ -1,3 +1,4 @@
+<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@page import="java.util.List"%>
 <%@page import="net.product.db.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -6,8 +7,12 @@
 <%@ page import="javax.sql.*" %>
 <%@ page import="javax.naming.*" %>
 <%request.setCharacterEncoding("UTF-8"); %>
-<%List<ProductBean> beans = (List<ProductBean>)session.getAttribute("infoproduct"); 
-   
+<%
+
+	ProductBean bean = (ProductBean)session.getAttribute("detailProduct"); 
+  	int count= bean.getProduct_count();
+  	int cost=bean.getProduct_cost();
+
 %>
 
 <!DOCTYPE html>
@@ -15,7 +20,18 @@
 <head>
 <meta charset="UTF-8">
 <title>상품주문</title>
+	<script type="text/javascript">
+					function myFunction() {
+  					
+  					var x= parseInt(document.getElementById("Order_count").value);  
+  					var y ="<%=cost%>"; 
+  					document.getElementById("demo").innerHTML ="합계:"+(x*y);
+  				 	
+					}
+	</script>
+
 </head>
+
 <style type="text/css">
 
   table{
@@ -50,25 +66,46 @@
 <body>
 
 <center>
-   <table border=1 >
-      <tr><td class="b" colspan=3>상품정보</td></tr>
+	<div class="aa" style="color: black;">각임?</div>
+ 	<table border=1 >
+ 	<tr> 
+   		<td colspan="4"><%=bean.getProduct_name() %></td>
+   	</tr>
  
 
-  <%if(session.getAttribute("infoproduct") == null){ %>
+  <%if(session.getAttribute("detailProduct") == null){ %>
   	<h3>상품이 없습니다.</h3>
   <% }else{%>
-  	<%for(ProductBean bean : beans){ %>
-   		<tr>
-      		<td class = "aa" style = "color:black;">
-      		<img src="<%=bean.getProduct_image()%>"></td>
-    	    <td>제품명: <%=bean.getProduct_name() %></td>
-        	<td>가격: <%=bean.getProduct_cost() %></td>
-        	
-       	
-         </tr>
-   	<%}%>
+	   	<tr>
+      		<td colspan="4"><img src="<%=bean.getProduct_image()%>"></td>
+      	</tr>
+      	<tr>
+      		
+      		<td>상품 가 격: <%=cost %></td>
+      		<td>개수:
+      		
+      			<select id="Order_count" onchange="myFunction()">
+      				<%for(int i=1;i<=count;i++){ %>
+      				<option value="<%=i %>" name="Order_count"> <%=i%></option>
+      				<%} %>
+      				
+      			</select>
+      			
+      		</td> 
+      		<td id="demo">	
+      		</td>
+      		<td>
+      		<a href="장바구니 ㄱㄱ"><button>장바구니에 담기</button></a>
+      		<a href="OrderOrderAction.po"><button>구입 하기</button></a>
+      		</td>
+      		
+    	  
+    	</tr>
+	</talbe>
+	
+
    <%}%>
-</table>
+
 </center>
 </body>
 </html>

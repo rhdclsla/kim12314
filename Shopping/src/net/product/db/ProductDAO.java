@@ -139,8 +139,8 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(re!=null) {conClose(); re.close();}
-				if(pt!=null) {conClose(); pt.close();}
+				if(re!=null) { re.close(); re=null;}
+				if(pt!=null) { pt.close(); pt=null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
