@@ -7,6 +7,7 @@
 			username="hr"
 			password="1234"
 			maxActive="20"
-			maxIdle="10"
+			maxIdle="20"
 			maxWait="-1"/>
+			<!-- 한번해본다ㅋ -->
 </Context>

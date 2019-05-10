@@ -20,26 +20,26 @@ public class MemberLoginAction implements Action {
 		request.setCharacterEncoding("euc-kr");
 		
 	
-		memberbean.setId(request.getParameter("id"));
-		memberbean.setPw(request.getParameter("pw"));
-		
+		memberbean.setMember_id(request.getParameter("id"));
+		memberbean.setMember_pw(request.getParameter("pw"));
 
-		if(!memberdao.idCheck(memberbean.getId(), memberbean.getPw())) {
+		if(!memberdao.idCheck(memberbean.getMember_id(), memberbean.getMember_pw())) {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('아이디 또는 비밀번호가 잘못되었습니다.')");
-			out.println("location.href='./MemberLoginForm.mo';");
+			out.println("location.href='./MemberLoginForm.mo'");
 			out.println("</script>");
 			out.close();
-			System.out.println("7");
 			return null;
 		}
 		
-		session.setAttribute("id", memberbean.getId());
+		session.setAttribute("id", memberbean.getMember_id());
 		ActionForward forward= new ActionForward();
 		forward.setRedirect(true);
-   		forward.setPath("./BoardList.bo");
-   		memberdao.connClose();
+	   	forward.setPath("main.po");
+	   	memberdao.connClose();
 		return forward;
+
+		
 	 }
 }
