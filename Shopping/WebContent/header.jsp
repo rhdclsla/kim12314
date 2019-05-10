@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,40 +8,45 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<div id="header" class="header">
+   <div id="header" class="header">
 
-	<%if(session.getAttribute("id")!=null) {%>
-		<%if(session.getAttribute("id").equals("admin")){ %>
-			<a href="AdminPage.mo">ADMINPAGE</a>
-		<%}%>	
-			<a href="MemberLogoutAction.mo">LOGOUT</a>
-			<a href="www.daum.net">BASKET</a> 
-			<a href="ProductOrderAction.po">ORDER</a>
-	<%}else{ %>	
-			<a href="MemberLoginForm.mo">LOGIN</a>
-			<a href="MemberAddView.mo">JOIN</a>	
-	<%} %>
-			<a href="www.nate.com">NOTICE</a>
-			<a href="BoardList.bo">Q&A</a> 
-			<a href="www.naver.com">REVIEW</a>	
-	</div>
-
-
-	<div id="index">
-		<a href="main.jsp"><img src="image/h1Logo.png" width="200px"
-			height="70px"></a>
-	</div>
+   <%if(session.getAttribute("id")!=null) {%>
+      <%if(session.getAttribute("id").equals("admin")){ %>
+         <a href="AdminPage.mo">ADMINPAGE</a>
+      <%}%>   
+         <a href="MemberLogoutAction.mo">LOGOUT</a>
+         <a href="www.daum.net">BASKET</a> 
+         <a href="ProductOrderAction.po">ORDER</a>
+   <%}else{ %>   
+         <a href="MemberLoginForm.mo">LOGIN</a>
+         <a href="MemberAddView.mo">JOIN</a>   
+   <%} %>
+         <a href="www.nate.com">NOTICE</a>
+         <a href="BoardList.bo">Q&A</a> 
+         <a href="www.naver.com">REVIEW</a>   
+   </div>
 
 
+   <div id="index">
+      <a href="main.jsp"><img src="image/h1Logo.png" width="200px"
+         height="70px"></a>
+   </div>
 
 
-	
 
-	<div class="menubar">
+
+   
+
+   <div class="menubar">
 
 
       <ul>
-		 <li><a href="aboutmaxim.jsp">ABOUT MAXIM</a></li>
+       <li><a href="aboutmaxim.jsp">ABOUT MAXIM</a></li>
+       
+         <li><a href="#">MEDIA</a></li>
+         
+                  <li><a href="#">NOTICE</a></li>
+         
          <li><a href="#" id="current">PRODUCT</a>
             <ul>
                <li><a href="ProductInfoAction.po?category=ORIGINAL">ORIGINAL</a></li>
@@ -51,11 +56,17 @@
                <li><a href="#">TASSIMO</a></li>
             </ul>
          </li>
-         <li><a href="#">EVENT</a></li>
-         <li><a href="#">NEWS&MEDIA</a></li>
-         <li><a href="#">CUSTOMER</a></li>
+         
+         <li><a href="#">CUSTOMER</a>
+         <ul>
+               <li><a href="ProductInfoAction.po?category=ORIGINAL">LOGIN&JOIN</a></li>
+               <li><a href="#">CART</a></li>
+               <li><a href="#">ORDER</a></li>
+               <li><a href="#">MYSHOPPING</a></li>
+               <li><a href="#">Q&A</a></li>
+            </ul>
+         </li>
       </ul>
    </div>
 </body>
 </html>
-

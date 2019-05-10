@@ -10,7 +10,6 @@
 <title>상품등록</title>
 
 
-
 </head>
 <body>
 <div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
@@ -19,7 +18,7 @@
 <fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss" var="date"/>
 
 <form method="post" action="ProductAddAction.po" name = "productaddform">
-<input type="hidden" name = "image" id = "image" value="<%=request.getParameter("image")%>" readonly/>
+<input type="text" name = "image" id = "image" value="<%=request.getParameter("image")%>" readonly/>
 <table border="1">
 
 
@@ -40,11 +39,11 @@
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
-      <td colspan="5"><a href="./product/image.jsp">이미지</a></td>
+      <td colspan="5"><a href="./image.jsp">이미지</a></td>
    </tr>
    <tr>
       <td><img src="<%=request.getParameter("image")%>"></td>
-
+	<td><img src="C:\Users\z\Desktop\진꾸\s.png.PNG"></td>
    </tr>
    <tr>
       <td>수량</td><td colspan="3"><input type="text" id="count" name="count"></td><td>상품등록일</td>

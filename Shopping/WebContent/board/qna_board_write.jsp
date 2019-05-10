@@ -60,7 +60,7 @@ table.style_Table td {
 							<div align="center">비밀번호</div>
 						</td>
 						<td><input name="BOARD_PASS" style="font-size: 20"
-							;type="password" size="20" maxlength="20" value="" /></td>
+							type="password" size="20" maxlength="20" value="" /></td>
 					</tr>
 				
 					<tr>
