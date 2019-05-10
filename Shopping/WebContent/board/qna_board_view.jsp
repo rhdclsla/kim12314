@@ -6,55 +6,48 @@
 
 <html>
 <head>
-	<title>MVC ∞‘Ω√∆«</title>
-	<link rel="stylesheet" href="css/style.css" />
+
+	<title>Q&A Detail</title>
 	<style type="text/css">
 
-	
-	
 </style>
 </head>
 
 <body>
 <div id="container">
 <div><jsp:include page="/header.jsp"></jsp:include></div>
-<!-- ∞‘Ω√∆« ºˆ¡§ -->
-<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br><br>
-		<br>
-		<br>
-		
+<!-- Í≤åÏãúÌåê ÏàòÏ†ï -->
+
+<div id="container">
+		<div><jsp:include page="/header.jsp"></jsp:include></div>
 <center><table cellpadding="0" cellspacing="0">
-	
+	<br><br><br><br><br><br><br>
 	
 	<tr>
-		<td style="font-family:µ∏¿Ω; font-size:20" height="16">
-			<div align="center">¡¶ ∏Ò&nbsp;&nbsp;</div>
+		<td style="font-family:ÎèãÏùå; font-size:20" height="16">
+			<div align="center">Ï†ú Î™©&nbsp;&nbsp;</div>
 		</td>
 		
-		<td style="font-family:µ∏¿Ω; font-size:20">
+		<td style="font-family:ÎèãÏùå; font-size:20">
 		<%=board.getBOARD_SUBJECT()%>
 		</td>
 	</tr>
 	
 	<tr bgcolor="cccccc">
-		<td colspan="2" style="height:1px;">
+		<td colspan="2" style="height:2px;">
 		</td>
 	</tr>
 	
 	<tr>
-		<td style="font-family:µ∏¿Ω; font-size:20">
-			<div align="center">≥ª øÎ</div>
+		<td style="font-family:ÎèãÏùå; font-size:20">
+			<div align="center">ÎÇ¥ Ïö©</div>
 		</td>
-		<td style="font-family:µ∏¿Ω; font-size:20">
-			<table border=0 width=700 height=400 style="table-layout:fixed">
+		<td style="font-family:ÎèãÏùå; font-size:20">
+
+			<table border=0 width=900 height=500 style="table-layout:fixed">
+
 				<tr>
-					<td valign=top style="font-family:µ∏¿Ω; font-size:20">
+					<td valign=top style="font-family:ÎèãÏùå; font-size:20">
 					<%=board.getBOARD_CONTENT() %>
 					</td>
 				</tr>
@@ -62,10 +55,10 @@
 		</td>
 	</tr>
 	<tr>
-		<td style="font-family:µ∏¿Ω; font-size:20">
-			<div align="center">√∑∫Œ∆ƒ¿œ</div>
+		<td style="font-family:ÎèãÏùå; font-size:20">
+			<div align="center">Ï≤®Î∂ÄÌååÏùº</div>
 		</td>
-		<td style="font-family:µ∏¿Ω; font-size:20">
+		<td style="font-family:ÎèãÏùå; font-size:20">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
 		<a href="./boardupload/<%=board.getBOARD_FILE()%>">
 			<%=board.getBOARD_FILE() %>
@@ -75,28 +68,31 @@
 	</tr>
 	
 	<tr bgcolor="cccccc">
-		<td colspan="2" style="height:1px;"></td>
+		<td colspan="2" style="height:2px;"></td>
 	</tr>
 	<tr><td colspan="2">&nbsp;</td></tr>
 	
 	<tr align="center" valign="middle">
 		<td colspan="5">
-			<font size=5>
+
+			<font size=4>
+
 			<a href="./BoardReplyAction.bo?num=<%=board.getBOARD_NUM() %>">
-			[¥‰∫Ø]
+			[ÎãµÎ≥Ä]
 			</a>&nbsp;&nbsp;
 			<a href="./BoardModify.bo?num=<%=board.getBOARD_NUM() %>">
-			[ºˆ¡§]
+			[ÏàòÏ†ï]
 			</a>&nbsp;&nbsp;
 			<a href="./BoardDelete.bo?num=<%=board.getBOARD_NUM() %>">
-			[ªË¡¶]
+			[ÏÇ≠Ï†ú]
 			</a>&nbsp;&nbsp;
-			<a href="./BoardList.bo">[∏Ò∑œ]</a>&nbsp;&nbsp;
+			<a href="./BoardList.bo">[Î™©Î°ù]</a>&nbsp;&nbsp;
 			</font>
 		</td>
 	</tr>
-</table></center>
-<!-- ∞‘Ω√∆« ºˆ¡§ -->
+
+</table></center></div>
+<!-- Í≤åÏãúÌåê ÏàòÏ†ï -->
 </div>
 </body>
 </html>
