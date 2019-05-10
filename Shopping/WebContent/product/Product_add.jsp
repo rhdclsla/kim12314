@@ -39,11 +39,11 @@
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
-      <td colspan="5"><a href="./image.jsp">이미지</a></td>
+
+      <td colspan="5"><a href="imageAdd.po">이미지</a></td>
    </tr>
    <tr>
       <td><img src="<%=request.getParameter("image")%>"></td>
-	<td><img src="C:\Users\z\Desktop\진꾸\s.png.PNG"></td>
    </tr>
    <tr>
       <td>수량</td><td colspan="3"><input type="text" id="count" name="count"></td><td>상품등록일</td>

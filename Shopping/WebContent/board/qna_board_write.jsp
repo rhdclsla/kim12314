@@ -50,7 +50,7 @@ table.style_Table td {
 						<td style="font-family: µ∏¿Ω; font-size: 20" height="16">
 							<div align="center">±€æ¥¿Ã</div>
 						</td>
-						<td style="font-size: 20";>${id} <input name="BOARD_NAME"
+						<td style="font-size: 20">${id} <input name="BOARD_NAME"
 							type="hidden" size="10" maxlength="10" value="${id}" readonly />
 						</td>
 					</tr>

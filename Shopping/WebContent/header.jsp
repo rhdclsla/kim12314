@@ -27,10 +27,10 @@
    </div>
 
 
-   <div id="index">
-      <a href="main.jsp"><img src="image/h1Logo.png" width="200px"
-         height="70px"></a>
-   </div>
+	<div id="index">
+		<a href="main.po"><img src="image/h1Logo.png" width="200px"
+			height="70px"></a>
+	</div>
 
 
 
