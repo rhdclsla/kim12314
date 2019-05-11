@@ -149,7 +149,7 @@ body {
 			<div id="slide-holder">
 			
 				<div class="slide">
-					<img src="image/M1.jpg" width="1250px" height="680px"/>
+					<img src="image/M11.jpg" width="1250px" height="680px"/>
 				</div>
 				
 				<div class="slide">

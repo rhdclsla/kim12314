@@ -46,10 +46,6 @@
 			net.product.action.ProductFrontController
 	</servlet-class>
   </servlet>
-   <servlet-mapping>
-    <servlet-name>NoticetFrontController</servlet-name>
-    <url-pattern>*.no</url-pattern>
-  </servlet-mapping>
   
   <servlet>
     <servlet-name>OrderFrontController</servlet-name>

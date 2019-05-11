@@ -34,8 +34,7 @@
    </tr>
    <tr>
       <td colspan="6">상품상세 설명</td>
-   </tr>
-   <tr>
+  
       <td colspan="6"><textarea rows="10" cols="110" name="detail" id="detail"></textarea></td>
    </tr>
    <tr>
