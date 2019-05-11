@@ -15,15 +15,12 @@
          <a href="AdminPage.mo">ADMINPAGE</a>
       <%}%>   
          <a href="MemberLogoutAction.mo">LOGOUT</a>
-         <a href="www.daum.net">BASKET</a> 
-         <a href="ProductOrderAction.po">ORDER</a>
+         
    <%}else{ %>   
          <a href="MemberLoginForm.mo">LOGIN</a>
-         <a href="MemberAddView.mo">JOIN</a>   
+           
    <%} %>
-         <a href="www.nate.com">NOTICE</a>
-         <a href="BoardList.bo">Q&A</a> 
-         <a href="www.naver.com">REVIEW</a>   
+         
    </div>
 
 
@@ -45,7 +42,7 @@
        
          <li><a href="#">MEDIA</a></li>
          
-                  <li><a href="#">NOTICE</a></li>
+                  <li><a href="NewsListAction.ne">NOTICE</a></li>
          
          <li><a href="#" id="current">PRODUCT</a>
             <ul>
@@ -58,12 +55,19 @@
          </li>
          
          <li><a href="#">CUSTOMER</a>
-         <ul>
-               <li><a href="ProductInfoAction.po?category=ORIGINAL">LOGIN&JOIN</a></li>
-               <li><a href="#">CART</a></li>
-               <li><a href="#">ORDER</a></li>
-               <li><a href="#">MYSHOPPING</a></li>
-               <li><a href="#">Q&A</a></li>
+         <ul><%if(session.getAttribute("id")!=null) {%>
+         
+         <li><a href="www.daum.net">CART</a></li>
+         <li><a href="#">ORDER</a></li>
+         <li><a href="#">MYSHOPPING</a></li>
+         
+        
+   <%}else{ %>   
+       <li><a href="MemberLoginForm.mo">LOGIN</a></li>
+               <li><a href="MemberAddView.mo">JOIN</a></li>
+   <%} %>
+           <li><a href="BoardList.bo">Q&A</a></li>
+          
             </ul>
          </li>
       </ul>
