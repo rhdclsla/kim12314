@@ -70,7 +70,7 @@ public class ProductDAO {
 	//상품 수정
 	public boolean updateProduct(ProductBean productbean) throws SQLException {
 		String sql = "update product "
-				+ "set"
+				+ "A set"
 					+ "product_category = ?,"
 					+ "product_name = ?,"
 					+ "product_count = ?,"
@@ -81,9 +81,9 @@ public class ProductDAO {
 					+ "product_date = ?"
 				+ "where product_code ="+productbean.getProduct_code();
 		java.sql.Timestamp date = java.sql.Timestamp.valueOf(productbean.getProduct_date());
+		
 		try {
 			pt = conn.prepareStatement(sql);
-			
 			pt.setString(1, productbean.getProduct_category());
 			pt.setString(2, productbean.getProduct_name());
 			pt.setInt(3, productbean.getProduct_count());
@@ -94,7 +94,6 @@ public class ProductDAO {
 			pt.setTimestamp(8, date);
 			
 			pt.executeUpdate();
-			
 			return true;
 			
 		}catch(RuntimeException er) {
@@ -211,7 +210,6 @@ public class ProductDAO {
 	            productbean.setProduct_date(date);
 	            list.add(productbean);
 	         }
-	         System.out.println("잘되냐??");
 	         return list;
 	      }catch(RuntimeException er) {
 	         er.printStackTrace();
