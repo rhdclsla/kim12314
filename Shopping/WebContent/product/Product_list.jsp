@@ -48,7 +48,7 @@ table.style_Table td {
 	</tr>
 	<%for(ProductBean bean : beans){ %>
 	<tr align="center" style="font-size:15pt">
-		<td><a href="ProductDetailAction.mo?id=<%=bean.getProduct_code() %>">
+		<td><a href="ProductDetailAction.po?id=<%=bean.getProduct_code() %>">
          <%=bean.getProduct_code() %>
          </a></td>
 		<td><%=bean.getProduct_name() %></td>

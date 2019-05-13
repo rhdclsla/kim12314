@@ -55,6 +55,7 @@
     <servlet-name>NewsFrontController</servlet-name>
     <url-pattern>*.ne</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>ReviewFrontController</servlet-name>
     <servlet-class>

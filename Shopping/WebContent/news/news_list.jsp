@@ -15,9 +15,7 @@
 	int maxpage = ((Integer) request.getAttribute("maxpage")).intValue();
 	int startpage = ((Integer) request.getAttribute("startpage")).intValue();
 	int endpage = ((Integer) request.getAttribute("endpage")).intValue();	
-	
-	request.setCharacterEncoding("UTF-8");
-	
+		
 %>
 </head>
 <body>
