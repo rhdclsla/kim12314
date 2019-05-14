@@ -1,12 +1,14 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="net.product.db.ProductBean"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+   pageEncoding="UTF-8"%>
+<%@ page import = "net.product.db.ProductBean" %>
+       <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>상품목록</title>
 <style type="text/css">
 img {
@@ -32,6 +34,7 @@ a {
 	font-size: 25pt;
 	color: #000000;
 }
+
 </style>
 
 <script
@@ -42,11 +45,6 @@ a {
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-
-
-
-
 
 
 	<jsp:useBean id="now" class="java.util.Date" />
@@ -119,6 +117,7 @@ a {
 	<!-- 
 valign=top style="font-family: 돋음; font-size: 12" id="deteail"
  -->
+
 
 </body>
 </html>
