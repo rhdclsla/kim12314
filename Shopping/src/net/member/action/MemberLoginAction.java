@@ -27,19 +27,27 @@ public class MemberLoginAction implements Action {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('아이디 또는 비밀번호가 잘못되었습니다.')");
-			out.println("location.href='./MemberLoginForm.mo'");
+			out.println("location.href='./MemberLoginForm.mo';");
 			out.println("</script>");
 			out.close();
 			return null;
 		}
 		
-		session.setAttribute("id", memberbean.getMember_id());
-		ActionForward forward= new ActionForward();
-		forward.setRedirect(true);
-	   	forward.setPath("main.po");
-	   	memberdao.connClose();
-		return forward;
-
+		if(memberbean.getMember_id().equals("admin")) {
+			session.setAttribute("id", memberbean.getMember_id());
+			ActionForward forward= new ActionForward();
+			forward.setRedirect(true);
+	   		forward.setPath("./AdminPage.mo");
+	   		memberdao.connClose();
+			return forward;
+		}else {
+			session.setAttribute("id", memberbean.getMember_id());
+			ActionForward forward= new ActionForward();
+			forward.setRedirect(true);
+	   		forward.setPath("main.po");
+	   		memberdao.connClose();
+			return forward;
+		}
 		
 	 }
 }

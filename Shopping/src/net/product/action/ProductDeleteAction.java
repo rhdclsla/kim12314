@@ -19,20 +19,21 @@ public class ProductDeleteAction implements Action{
 		
 		productbean.setProduct_code(Integer.parseInt(request.getParameter("code")));
 		
-		
-		if(!productdao.deleteProduct(productbean.getProduct_code())) {
+		if(request.getParameter("code") != null) {
+			if(!productdao.deleteProduct(productbean.getProduct_code())) {
 				PrintWriter out = response.getWriter();
 				out.println("<script>");
 				out.println("alert('Deletion is failed try again')");
 				out.print("</script>");
 				out.close();
 				return null;
+			}
+		}else{
+			return null;
 		}
-
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-
-		forward.setPath("ProductListAction.po");
+		forward.setPath("상품등록 페이지");
 		productdao.conClose();
 		return forward;
 		

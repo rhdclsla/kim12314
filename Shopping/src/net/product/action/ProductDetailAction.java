@@ -14,9 +14,9 @@ import net.product.db.ProductDAO;
 public class ProductDetailAction implements Action{
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		HttpSession session = request.getSession();
-		ProductDAO productdao = new ProductDAO();	
+		ProductDAO productdao = new ProductDAO();
 		
-		int code = Integer.parseInt(request.getParameter("code"));
+		int code = Integer.parseInt(request.getParameter("product_code"));
 		
 		if(productdao.detailProduct(code) == null) {
 			PrintWriter out = response.getWriter();
@@ -26,12 +26,10 @@ public class ProductDetailAction implements Action{
 			out.close();
 			return null;
 		}
-
-		session.setAttribute("detailProduct", productdao.detailProduct(code));
+		session.setAttribute("detailproduct", productdao.detailProduct(code));
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("ProductDetail.po");
-
+		forward.setPath("상품등록 페이지");
 		productdao.conClose();
 		return forward;
 		

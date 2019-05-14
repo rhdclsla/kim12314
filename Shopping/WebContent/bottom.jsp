@@ -8,13 +8,14 @@
 </head>
 <body>
 
-	
+
 	<div id="footer">
 		<p>
 			<a href="#header"><img src="image/bottom1.png" width="70px"
 				height="70px" /></a>
 		</p>
 	</div>
+
 
 </body>
 </html>

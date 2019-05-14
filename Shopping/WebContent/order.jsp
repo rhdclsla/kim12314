@@ -4,8 +4,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css"/>
-<!-- <style>
+<style>
 h1 {
 	padding: 50px 0;
 	font-weight: 400;
@@ -62,7 +61,7 @@ input:checked+label {
 #tab1:checked ~ #content1, #tab2:checked ~ #content2 {
 	display: block;
 }
-</style> -->
+</style>
 
 <title>Document</title>
 </head>
@@ -70,10 +69,7 @@ input:checked+label {
 
 	<div id="container">
 		<div><jsp:include page="header.jsp"></jsp:include></div>
-		<br>
-		<br>
-		<br>
-		<br>
+		<br><br><br><br>
 		<div class="main">
 
 

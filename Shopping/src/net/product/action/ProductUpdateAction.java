@@ -25,7 +25,6 @@ public class ProductUpdateAction implements Action{
 		productbean.setProduct_price(Integer.parseInt(request.getParameter("price")));
 		productbean.setProduct_detail(request.getParameter("detail"));
 		productbean.setProduct_date(request.getParameter("date"));
-		System.out.println(productbean.getProduct_date());
 		
 		if(!productdao.updateProduct(productbean)) {
 			PrintWriter out = response.getWriter();
@@ -38,7 +37,7 @@ public class ProductUpdateAction implements Action{
 		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("ProductDetailAction.po?code="+productbean.getProduct_code());
+		forward.setPath("상품등록 페이지");
 		productdao.conClose();
 		return forward;
 		
