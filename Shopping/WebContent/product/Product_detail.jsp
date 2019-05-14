@@ -29,8 +29,10 @@
 		
 		<div><jsp:include page="/header.jsp" flush="false"></jsp:include></div>
 	
-		<div><jsp:include page="NewFile.jsp" flush="false"></jsp:include></div>
-	 
+				<br><br><br><br><br><br><br><br><br><br>
+			<center>
+		<div><jsp:include page="productDetail.jsp" flush="false"></jsp:include></div>
+	 </center>
 		<div><jsp:include page="/bottom1.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="/bottom.jsp" flush="false"></jsp:include></div>
 			
