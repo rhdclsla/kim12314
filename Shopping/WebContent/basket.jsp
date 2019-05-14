@@ -102,7 +102,7 @@ input:checked+label {
 						<%=id %>님 반갑습니다.
 						<%} %>
 					</div>
-					<h4 class="title">혜택정보</h4>
+					
 					<div class="description">
 						<div class="member ">
 

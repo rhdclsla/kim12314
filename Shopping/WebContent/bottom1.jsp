@@ -7,10 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<div id="container">
 		<div id="footer1">
 			<p>
-				<img src="image/tel.gif" />
+				<a href="NewFile.jsp" > 눌러바 ㅋ</a>
 			</p>
 		</div>
+		</div>
+
 </body>
 </html>

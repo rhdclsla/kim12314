@@ -1,22 +1,51 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	h2{
-		text-align : center;
-	}
+h2 {
+	text-align: center;
+}
+
+table {
+	position: absolute;
+	top: 180px;
+	left: 900px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
-<h2>관리자 페이지 입니다.</h2><hr>
-<a href = "ProductListAction.po">상품리스트</a><br><br>
-<a href = "MemberListViewAction.mo">회원리스트</a><br><br>
-<a href = "Product_list.po">매출현황</a><br><br>
-<a href = "Product_list.po">배송리스트.</a><br><br>
-<a href = "MemberLogoutAction.mo">로그아웃</a><br><br>
+
+	<div id="container">
+		<div><jsp:include page="/header.jsp"></jsp:include></div>
+		<div align="center">
+			<table>
+			
+				<tr>
+					<td>
+					<br><br>
+						<h1>관리자 페이지 입니다.</h1>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="ProductListAction.po"><h2>상품리스트</h2></a></td>
+				</tr>
+				<tr>
+					<td><a href="MemberListViewAction.mo"><h2>회원리스트</h2></a></td>
+				</tr>
+				<tr>
+					<td><a href="Product_list.po"><h2>매출현황</h2></a></td>
+				</tr>
+				<tr>
+					<td><a href="Product_list.po"><h2>배송리스트</h2></a></td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
 </body>
 </html>

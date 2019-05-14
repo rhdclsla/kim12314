@@ -5,15 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
 	<div id="container">
-		<div id="board">
-
-			<p>
-				<a href="#"><img src="image/best1.jpg" width="200px"
-					height="200px" /></a>
-			</p>
+		<div class="board2">
+			<img src="image/abt1.png" width="1200"/>
 		</div>
 	</div>
 </body>

@@ -5,6 +5,8 @@
 <head>
 <link rel="stylesheet" href="css/style.css" />
 <meta charset="UTF-8">
+<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+
 <style>
 h1 {
 	padding: 50px 0;
@@ -78,6 +80,9 @@ Button {
 	clear: none;
 	float: none;
 }
+#naverIdLogin{
+	text-align: center;
+}
 /* login_div{
 	position:fixed;
 } */
@@ -133,8 +138,24 @@ Button {
 					</table>
 				</center>
 			</form>
-
 		</div>
 	</div>
+	
+	
+	<div id="naverIdLogin"></div>
+	
+	<script type="text/javascript">
+		var naverLogin = new naver.LoginWithNaverId(
+			{
+				clientId:"817YOaY39wvn8CRMKIfT",
+				callbackUrl:"http://localhost/Shopping/callback.jsp",
+				isPopup: false,
+				loginButton: {color: "green", type: 3, height: 60} 
+			}
+		);
+	
+		
+		naverLogin.init();
+</script>
 </body>
 </html>

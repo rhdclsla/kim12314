@@ -1,4 +1,4 @@
-package net.product.db;
+﻿package net.product.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,20 +37,19 @@ public class ProductDAO {
 	//디비에 상품 등록하기
 	public boolean insertProduct(ProductBean productbean) throws SQLException {
 		
-		String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into product values(sqe_code.nextval,?,?,?,?,?,?,?,?)";
 		java.sql.Timestamp date = java.sql.Timestamp.valueOf(productbean.getProduct_date());
 		try {
 			pt = conn.prepareStatement(sql);
-			
-			pt.setInt(1, productbean.getProduct_code());
-			pt.setString(2, productbean.getProduct_category());
-			pt.setString(3, productbean.getProduct_name());
-			pt.setInt(4, productbean.getProduct_count());
-			pt.setString(5, productbean.getProduct_image());
-			pt.setInt(6, productbean.getProduct_cost());
-			pt.setInt(7, productbean.getProduct_price());
-			pt.setString(8, productbean.getProduct_detail());
-			pt.setTimestamp(9, date);
+		
+			pt.setString(1, productbean.getProduct_category());
+			pt.setString(2, productbean.getProduct_name());
+			pt.setInt(3, productbean.getProduct_count());
+			pt.setString(4, productbean.getProduct_image());
+			pt.setInt(5, productbean.getProduct_cost());
+			pt.setInt(6, productbean.getProduct_price());
+			pt.setString(7, productbean.getProduct_detail());
+			pt.setTimestamp(8, date);
 			
 			pt.executeUpdate();
 			
@@ -60,7 +59,7 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt =null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -71,7 +70,7 @@ public class ProductDAO {
 	//상품 수정
 	public boolean updateProduct(ProductBean productbean) throws SQLException {
 		String sql = "update product "
-				+ "set product_code = ?,"
+				+ "A set"
 					+ "product_category = ?,"
 					+ "product_name = ?,"
 					+ "product_count = ?,"
@@ -82,28 +81,26 @@ public class ProductDAO {
 					+ "product_date = ?"
 				+ "where product_code ="+productbean.getProduct_code();
 		java.sql.Timestamp date = java.sql.Timestamp.valueOf(productbean.getProduct_date());
+		
 		try {
 			pt = conn.prepareStatement(sql);
-			
-			pt.setInt(1, productbean.getProduct_code());
-			pt.setString(2, productbean.getProduct_category());
-			pt.setString(3, productbean.getProduct_name());
-			pt.setInt(4, productbean.getProduct_count());
-			pt.setString(5, productbean.getProduct_image());
-			pt.setInt(6, productbean.getProduct_cost());
-			pt.setInt(7, productbean.getProduct_price());
-			pt.setString(8, productbean.getProduct_detail());
-			pt.setTimestamp(9, date);
+			pt.setString(1, productbean.getProduct_category());
+			pt.setString(2, productbean.getProduct_name());
+			pt.setInt(3, productbean.getProduct_count());
+			pt.setString(4, productbean.getProduct_image());
+			pt.setInt(5, productbean.getProduct_cost());
+			pt.setInt(6, productbean.getProduct_price());
+			pt.setString(7, productbean.getProduct_detail());
+			pt.setTimestamp(8, date);
 			
 			pt.executeUpdate();
-			
 			return true;
 			
 		}catch(RuntimeException er) {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt = null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -112,37 +109,37 @@ public class ProductDAO {
 	}
 	
 	//상품상세정보용
-	public List detailProduct(int code) throws SQLException{
-		String sql = "select * from product where product_code = "+code;
-		List list = new ArrayList();
-		
+
+	public ProductBean detailProduct(int code) throws SQLException{
+		String sql = "select * from product where product_code = ?";
 		try {
 			pt = conn.prepareStatement(sql);
+			pt.setInt(1, code);
 			re = pt.executeQuery();
+			ProductBean productbean = new ProductBean();
 			
-			while(re.next()) {
-				ProductBean productbean = new ProductBean();
-				Date pd = re.getTimestamp("product_date");
-				String date = String.valueOf(pd);
-				
-				productbean.setProduct_code(re.getInt("product_code"));
-				productbean.setProduct_category(re.getString("product_category"));
-				productbean.setProduct_name(re.getString("product_name"));
-				productbean.setProduct_count(re.getInt("product_count"));
-				productbean.setProduct_image(re.getString("product_image"));
-				productbean.setProduct_cost(re.getInt("product_cost"));
-				productbean.setProduct_price(re.getInt("product_price"));
-				productbean.setProduct_detail(re.getString("product_detail"));
-				productbean.setProduct_date(date);
-				list.add(productbean);
-			}
+			if(!re.next()) {return null;}
 			
-			return list;
+			productbean.setProduct_code(re.getInt("product_code"));
+			productbean.setProduct_category(re.getString("product_category"));
+			productbean.setProduct_name(re.getString("product_name"));
+			productbean.setProduct_count(re.getInt("product_count"));
+			productbean.setProduct_image(re.getString("product_image"));
+			productbean.setProduct_cost(re.getInt("product_cost"));
+			productbean.setProduct_price(re.getInt("product_price"));
+			productbean.setProduct_detail(re.getString("product_detail"));
+			String date = String.valueOf(re.getTimestamp("product_date"));
+			productbean.setProduct_date(date);
+			
+			
+			return productbean;
 		}catch(RuntimeException er) {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+
+				if(re!=null) { re.close(); re=null;}
+				if(pt!=null) { pt.close(); pt=null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -169,7 +166,7 @@ public class ProductDAO {
 		  		productbean.setProduct_price(re.getInt("product_price"));
 		  		productbean.setProduct_detail(re.getString("product_detail"));
 		  		String date = String.valueOf(re.getTimestamp("product_date"));
-		  		productbean.setProduct_image(date);
+		  		productbean.setProduct_date(date);
 		  		list.add(productbean);
 	  		}
 	  		
@@ -188,10 +185,45 @@ public class ProductDAO {
 		return null;
 	}
 	
-	//상품 검색 상품이름용 
-	public String researchProduct(String id) {
-		return "x";
-	}
+	//상품 검색 상품카테고리용 
+	   public List researchProduct(String category) throws SQLException{
+	      String sql="select * from product where product_category=?";
+	      List list = new ArrayList();
+	      
+	      try {
+	         pt = conn.prepareStatement(sql);
+	         pt.setString(1, category);
+	         re = pt.executeQuery();
+	         while(re.next()) {
+	            ProductBean productbean = new ProductBean();
+	            
+	            String date = String.valueOf(re.getTimestamp("product_date"));
+	            
+	            productbean.setProduct_code(re.getInt("product_code"));
+	            productbean.setProduct_category(re.getString("product_category"));
+	            productbean.setProduct_name(re.getString("product_name"));
+	            productbean.setProduct_count(re.getInt("product_count"));
+	            productbean.setProduct_image(re.getString("product_image"));
+	            productbean.setProduct_cost(re.getInt("product_cost"));
+	            productbean.setProduct_price(re.getInt("product_price"));
+	            productbean.setProduct_detail(re.getString("product_detail"));
+	            productbean.setProduct_date(date);
+	            list.add(productbean);
+	         }
+	         return list;
+	      }catch(RuntimeException er) {
+	         er.printStackTrace();
+	      }finally {
+	         try {
+	        	if(re!=null) {re.close(); re = null; }
+	            if(pt!=null) {pt.close(); pt = null; }
+	         }catch(Exception e) {
+	            e.printStackTrace();
+	         }
+	      }
+	      return null;
+	   }
+
 	
 	//상품 검색 코드용 
 	public String researchProduct(int code) {
@@ -212,7 +244,7 @@ public class ProductDAO {
 			er.printStackTrace();
 		}finally {
 			try {
-				if(pt!=null) {conClose(); pt.close();}
+				if(pt!=null) {pt.close(); pt = null;}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
