@@ -12,6 +12,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="css/style.css" />
+<style type="text/css">
+body {
+	background-color: #f1f1f1;
+} 
+</style>
+
 </head>
 <body>
 
@@ -20,13 +26,14 @@
 		
 		<div><jsp:include page="header.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="banner.jsp" flush="false"></jsp:include></div>
-		<div><jsp:include page="board_1.jsp" flush="false"></jsp:include></div>
-
+		<%-- <div><jsp:include page="board_1.jsp" flush="false"></jsp:include></div>
+ --%>
 		<div><jsp:include page="best.jsp" flush="false"></jsp:include></div>
-	 
+	  
 		<div><jsp:include page="bottom1.jsp" flush="false"></jsp:include></div>
 		<div><jsp:include page="bottom.jsp" flush="false"></jsp:include></div>
 			
 
 	</div>
 </body>
+</html>

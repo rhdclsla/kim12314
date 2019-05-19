@@ -26,6 +26,7 @@ public class ProductAddAction implements Action{
 		productbean.setProduct_price(Integer.parseInt(request.getParameter("price")));
 		productbean.setProduct_detail(request.getParameter("detail"));
 		productbean.setProduct_date(request.getParameter("date"));
+		System.out.println(request.getParameter("date"));
 		
 		if(!productdao.insertProduct(productbean)) {
 			PrintWriter out = response.getWriter();

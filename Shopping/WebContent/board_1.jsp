@@ -9,25 +9,31 @@
 <link rel="stylesheet" href="css/style.css" />
 
 </head>
-<body>
+<body>	<!-- 
 	<div id="container">
 		<div class="board1">
 			<p>
 				<a href="NewFile.jsp"><img
-					src="image/btn01.png" height= "330px"width= "460px" /></a>
+					src="image/btn01.png" height= "290px"width= "460px" /></a>
 			</p>
-		</div>
-		<div class="board1_1">
-			<p>
+	
+		
+			
 				<a href="https://www.youtube.com/watch?v=nOitN0b_5do"><img
-					src="image/btn03.jpg" height= "320px" width= "460px" /></a>
-			</p>
+					src="image/btn2.png" height= "150px" width= "150px"  /></a>
+			
+			<a href="NewFile.jsp"><img
+					src="image/btn3.png" height= "150px"width= "150px" /></a>
+		 -->
+			
+			
+			<!--
 		</div>
 		<div class="board1_2">
 			<p>
 				<a href="https://www.facebook.com/maxim.kanu?fref=ts"><img
-					src="image/btn02.png" width= "460px" /></a>
-			</p>
+					src="image/btn02.png" width= "435px" /></a>
+			</p> -->
 		</div>
 	</div>
 </body>

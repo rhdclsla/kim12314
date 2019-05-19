@@ -9,21 +9,34 @@
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-   <div id="header" class="header">
+   <div   class="header"> 
 
    <%if(session.getAttribute("id")!=null) {%>
       <%if(session.getAttribute("id").equals("admin")){ %>
-         <a href="AdminPage.mo">ADMINPAGE</a>
-      <%}%>   
-         <a href="MemberLogoutAction.mo">LOGOUT</a>
+
+		<ul>
+		<li><a href="AdminPage.mo">ADMINPAGE</a>
+			<ul>
+				<li><a href="ProductListAction.po">상품 리스트</a></li>
+
+				<li><a href="MemberListViewAction.mo">회원리스트</a></li>
+
+				<li><a href="Product_list.po">매출현황</a></li>
+
+				<li><a href="Product_list.po" id="current">배송리스트</a>
+			</ul></li>
+
+		<%
+			}
+		%>   
+       <li>  <a href="MemberLogoutAction.mo">LOGOUT</a></li>
          
    <%}else{ %>   
-         <a href="MemberLoginForm.mo">LOGIN</a>
+      <li>   <a href="MemberLoginForm.mo">LOGIN</a></li>
            
    <%} %>
-         
+         </ul>
    </div>
-
 
 	<div id="index">
 		<a href="main.po"><img src="image/h1Logo.png" width="200px"

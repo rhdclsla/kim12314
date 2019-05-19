@@ -9,12 +9,12 @@
 <body>
 
 	<div id="container">
-		<div id="footer1">
+	<footer id="footer1">
 			<p>
 				<a href="NewFile.jsp" > 눌러바 ㅋ</a>
 			</p>
 		</div>
-		</div>
+</footer>
 
 </body>
 </html>
